@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>[熱傳] ㄧ、熱傳學基本概念</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="../../css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- 下面這行加入Math Jax 的 LaTex CDN -->
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Start Bootstrap</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="../../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="../../about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="../../post.html">Sample Post</a>
+                    </li>
+                    <li>
+                        <a href="../../contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('../../img/post-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>[熱傳] ㄧ、熱傳學基本概念</h1>
+                        <h2 class="subheading">斯斯有三種，熱傳也有三種...</h2>
+                        <span class="meta">Posted by <a href="#">Fernando Lin</a> on 09, 15, 2016</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+                    <p>國中都學過，熱用三種方式傳遞：傳導、對流、輻射，熱傳學也不過是用數學把這三種東西講一遍...嗯...非常...高級的方法全部說一遍...</p>
+
+                    <h2 class="section-heading">為什麼要學熱傳？</h2>
+
+                    <p>因為考試要考，而且剛好我想練習用很高級的方法寫筆記。所以就開始吧。</p>
+  
+                   <h2 class="section-heading">傳導</h2>
+                   <p>傳導就要講到神奇的傅立葉熱傳定律：</p>
+                    <p>$${\dot{\mathbf{Q}}_{conduction} = - kA \triangledown T}$$</p> 
+                    <p>其中 \(\dot{\mathbf{Q}}_{conduction}\) 是每<b>單位面積單位時間</b>(這個單位超重要的)通過的熱量(而且他是個向量)(你看我用粗體)(你懂的，取gradient嘛)，T是空間中的溫度分佈。</p>
+                    <p>這其實很合理，因為<b>溫度差越大，直覺地來說熱量傳的速度就越快</b>。寫的高級一點就變成正比於溫度梯度了。那那個負號哪來的？因為熱量是由高溫傳導低溫，所以若沿某方向的溫度變化\(dT\)為正，表示該方向溫度較高，而熱量應該就要往反方向流動，負號就生出來惹。</p>
+                    <p>既然有這個東西，接下來會很<s>理所當然的</s>想要對他用RTT然後縮到最小來看看微分形式會生出什麼東西。這裡我們偷渡一下散度定律：</p>
+                    <p>$$(\triangledown \cdot \dot{\mathbf{Q}}) dV dt =某個瞬間，某個體積單位元噴出的小熱量。$$</p>
+                    <p>因為散度就是幫你算每個超小超小超小超小超小大小為\(dV\)的體積為單位，他的表面會噴多少東西出來嘛～～(看不懂可以看<a href="https://en.wikipedia.org/wiki/Divergence#Physical_interpretation_of_divergence">這個</a>)</p>
+                    <p>接下來就是RTT惹～RTT說：</p>
+                    <p>$$熱量變化 = 自己生出來 - 表面噴出去$$</p>
+                    <p>接下來就隨便取一個很微小的體積單位元，\(dV\)，然後分別湊出這三個量，然後我們就有<b>精美的微分方程</b>可以用了～</p>
+                    <p>先從「自己生出來」的部分開始。假設<b>單位體積</b>(剛剛有說過單位很重要)、單位時間內，自己內部生出來的熱叫：</p>
+                    <p>$$\dot{q}_{gen}$$</p>
+                    <p>沒錯，我們懶惰到了極致。因為根本不知道他該長什麼樣子，所以就令一個全新的符號～</p>
+                    <p>所以在某個短暫時間\(dt\)內，在這個大小為\(dV\)的體積單位元中，自己生出來的熱假設叫：</p>
+                    <p>$$自己生出來 = \dot{q}_{gen} \cdot dV \cdot dt$$</p>
+                    <p>然後噴出去的熱量剛剛RTT已經幫我們做好了</p>
+                    <p>$$(\triangledown \cdot \dot{q}) \cdot dV \cdot dt$$</p>
+                    <p>然後帶入剛剛的傅立葉定律，就得到這個量的大小可以寫成：</p>
+                    <p>$$表面噴出去 = \triangledown \cdot {(- k \triangledown T)}\cdot dV \cdot dt$$</p>
+                    <p>然後國中大家都學過 \(H = m \cdot s \cdot \Delta T\)，這裡做一個高級一點的改寫：\(dH = dm \cdot s \cdot d T\)</p>
+                    <p>然後</p>
+                    <p>$$dm = \rho \cdot dV$$</p>
+                    <p>$$dH = \rho \cdot dV \cdot s \cdot dT$$</p>
+                    <p>其中\(\rho\)是密度，質量等於密度乘體積嘛～～然後因為課本喜歡用\(C\)來表示比熱，為了讓他開心就把\(s\)換成\(C\)。所以就有：</p>
+                    <p>$$熱量變化 = \rho \cdot dV \cdot C \cdot dT =  \rho C dT dV$$</p>
+                    <p>這樣的話，三個量都被找齊了。所以把它寫在一起：</p>
+                    <p>$$熱量變化 = 自己生出來 - 表面噴出去$$</p>
+                    <p>$$\rho  C \cdot dT \cdot dV = \dot{q}_{gen} \cdot dV \cdot dt - \triangledown \cdot {(- k \triangledown T})\cdot dV \cdot dt$$</p>
+                    <p>然後把\(dV\)消掉</p>
+                    <p>$$\rho  C \cdot dT = \dot{q}_{gen} \cdot dt - \triangledown \cdot {(- k \triangledown T}) \cdot dt$$</p>
+                    <p>然後把\(dt\)提出來</p>
+                    <p>$$\rho  C \cdot dT = （\dot{q}_{gen}  - \triangledown \cdot {(- k \triangledown T})) \cdot dt$$</p>
+                    <p>然後負負就得正：</p>
+                    <p>$$\rho  C \cdot dT = （\dot{q}_{gen}  ＋ \triangledown \cdot （{k \triangledown T})) \cdot dt$$</p>
+                    <p>最後把dt移到等號另外一邊。啊～因為這裡從頭到尾都沒有討論位置移動帶來的變化，所以除過去之後變成了個偏微分：</p>
+                    <p>$$\rho  C \cdot (\frac {\partial T} {\partial t}) =（\dot{q}_{gen}  + \triangledown \cdot {( k \triangledown T}))$$</p>
+                    <p>然後～然後～然後～<b>恭喜獲得精美的熱傳方程式 X 1：</b><p>
+                    <p>$$\rho  C \cdot (\frac {\partial T} {\partial t}) =\dot{q}_{gen}  + \triangledown \cdot {( k \triangledown T})$$</p>
+                    <p>啊 你以為結束了嗎？我們還有<b>對流</b>跟<b>輻射</b>啊啊啊啊啊！</p>
+
+                    <h2 class="section-heading">對流</h2>
+                    <p>你可能想「X，流體根本亂流，怎麼可能知道熱怎麼傳？」</p>
+                    <p>沒錯，人類到現在還<b>根本不知道</b>他怎麼傳。(因為他太複雜)(還有萬惡的手解不出來電腦也解不出來Navier-Stokes Equation)</p>
+                    <p>不過我們知道一件事，所有熱都是由高溫傳到低溫，而且大家都覺得差越大，熱傳得越快，所以：</p>
+                    <p>$$\dot{Q}_{convection} = hA \cdot (T - T{\infty})$$</p>
+                    <p>其中\(A\)是面積，\(T\)是該點的溫度。\(T_{\infty}\)是指<b>某個很遠很遠很遠目前這個物體影響不到他</b>的地方的溫度，可以想成是某種穩定狀態下的溫度。所以目前溫度跟穩定狀態差越大，熱就傳越快，中間差一個比例常數\(h\)，這個比例常數會跟<b>表面性質、流體性質、溫度、壓力、黏滯性、表面形狀、<s>留宿</s> 流速...</b>等等各種因素有關而且還有...</p>
+                    <p>等等，<b>你根本是把一切通通推給\(h\)嘛！這樣有講跟沒講一樣！</b></p>
+                    <p>沒錯，這就是人們處理熱對流的方法。</p>
+
+                    
+                    <h2 class="section-heading">輻射</h2>
+                    <p>傳說中古典物理<a href="https://zh.wikipedia.org/wiki/物理学史#.E5.8E.86.E5.8F.B2.E8.83.8C.E6.99.AF">天邊的兩朵小烏雲中的其中一朵</a>(最後把古典物理狠狠肛了一遍)。</p>
+                    <p>因為這個東西把古典物理徹頭徹尾的肛過一遍，而且大家都有從他學到一點教訓，所以對他的了解比對流還多了一些，不知道是好事還是壞事。</p>
+                    <p>熱輻射主要的定律是<b><a href="https://en.wikipedia.org/wiki/Stefan–Boltzmann_law">史特凡-波茲曼定律：</a></b></p>
+                    <p>$$\dot{Q}_{radiation} =  \epsilon \sigma (T^{4} -  T_{\infty }^{4})$$</p>
+                    <p>其中\(\sigma\)是常數，\(epsilon\)是發射率(emissivity)，黑體是1，表示可以全部吸收。</p>
+                    <p>其他東西就是<b><s>不要問，你會怕</s></b>之後再慢慢說了。</p>
+
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <!--<a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>-->
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/profile.php?id=100001416766501">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/0xff07">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; Yo-Jung Lin 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="../../js/jqBootstrapValidation.js"></script>
+    <script src="../../js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="../../js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
