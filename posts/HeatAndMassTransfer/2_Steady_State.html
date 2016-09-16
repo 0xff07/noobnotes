@@ -143,6 +143,7 @@
 
                     <p>然後就可以開始這篇文章第一個Case了。</p>
 
+
                     <h2 class="section-heading">1D Steady-State Heat Conduction Without Source</h2>
 
                     <p><$$k \frac{\mathrm{d^2}T }{\mathrm{d} x^2} = 0$$</p>
@@ -158,6 +159,7 @@
                    <p>(這很重要)</p>
 
                    <p>一條線有什麼了不起？這確實有點了不起。如果溫度分佈是一條線，就表示你可以用<b>歐姆定律</b>來簡化他。</p>
+
 
                     <h2 class="section-heading">熱阻</h2>
 
@@ -201,6 +203,7 @@
                     <p>因為溫差-熱流的關係，跟電壓-電流的關係是一樣的，因此熱阻<b>串聯、並聯</b>的簡化技巧都可以使用。
                         這樣一來，對於穩態分析，就可以用電路學中的各種技巧，達到大幅簡化的技巧。</p>
 
+
                     <h2 class="section-heading">等效熱阻</h2>
 
                     <p>首先，關於</p>                    
@@ -218,14 +221,23 @@
                         過表面的熱流總和是一樣的，所以熱流就會被分散在比較大的表面積上，溫度就沒辦法升那麼快，因此熱阻就變大了。</p>
 
                     <p>依照同樣的精神，有可以把熱阻應用在對流上：</p>
+
                     <p>$$\dot{Q} = hA(T - T_{\infty})$$</p>
+
                     <p>稍微移項一下：</p>
-                    <p>$$R = \frac {\Delta T} {\dot{Q}} = \frac {T - T_{\infty}} {\dot{Q}} = \frac {1} {Ah}$$</p>                   
+
+                    <p>$$R = \frac {\Delta T} {\dot{Q}} = \frac {T - T_{\infty}} {\dot{Q}} = \frac {1} {Ah}$$</p>  
+
                     <p>熱對流也可以有熱阻，不過熱對流的熱阻會取決於兩端的溫度：</p>
+
+
                     <p>$$\dot{Q} = \epsilon \sigma (T^{4} - T^{4}_{\infty}) = \epsilon \sigma (T^{2} + T^{2}_{\infty})(T^{2} - T^{2}_{\infty})
                         = \epsilon \sigma (T^{2} + T^{2}_{\infty})(T + T_{\infty})(T - T_{\infty})$$</p>
+
                     <p>所以把旁邊的\(T - T_{\infty}\)移過去，就得到：</p>
+
                     <p>$$R = \frac {\Delta T} {\dot{Q}} = \frac {T - T_{\infty}} {\dot{Q}} = \frac {1} {\epsilon \sigma (T^{2} + T^{2}_{\infty})(T + T_{\infty})}$$</p>    
+
                     <p>因為與兩邊溫度有相依關係，所以輻射熱阻通常不是直接用，而是多提供一道關係來求解。</p>
 <!------------------------------------------------ contents goes here  ------------------------------------------------------->
 
