@@ -1,0 +1,14 @@
+傅立葉熱傳定律(三維)
+$${\dot{\mathbf{Q}}_{conduction} = - kA \triangledown T}$$
+
+傅立葉熱傳(一維)
+$$\dot{Q} = -kA\frac {dT} {dx}$$
+
+熱傳方程式
+$$\rho  C \cdot (\frac {\partial T} {\partial t}) =（\dot{q}_{gen}  + \triangledown \cdot {( k \triangledown T}))$$
+
+牛頓冷卻定律
+$$\dot{Q}_{convection} = hA \cdot (T - T{\infty})$$
+
+史特凡-波茲曼定律
+$$\dot{Q}_{radiation} =  \epsilon \sigma (T^{4} -  T_{\infty }^{4})$$

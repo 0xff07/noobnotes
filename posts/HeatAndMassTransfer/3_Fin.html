@@ -9,7 +9,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Noob Notes - 熱傳</title>
+<!------------------------------------------------_EDIT title goes here  ------------------------------------------------------->
+    <title>[熱傳] 三、鰭片</title>
+<!------------------------------------------------title goes here  ------------------------------------------------------->
 
     <!-- Bootstrap Core CSS -->
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +20,7 @@
     <link href="../../css/clean-blog.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="../..vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -28,6 +30,8 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <!-- 下面這行連結到Server上的MathJax.js -->
+     <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 </head>
 
@@ -57,9 +61,9 @@
                     <li>
                         <a href="../../category.html">Category</a>
                     </li>
-                    <!---
+                    <!--
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="../../contact.html">Contact</a>
                     </li>
                     -->
                 </ul>
@@ -75,80 +79,62 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">
-                        <h1>熱傳學</h1>
-                        <hr class="small">
-                        <span class="subheading">Keep Calm & Buy Me A KFC</span>
+                    <div class="post-heading">
+<!------------------------------------------------ _EDIT header goes here  ------------------------------------------------------->
+                        
+                        <h1>[熱傳] 三、鰭片</h1>
+                        <h2 class="subheading">LA FIN...</h2>
+                        <span class="meta">Posted by <a>Fernando Lin</a> on 09, 18, 2016</span>
+
+<!------------------------------------------------remember the time  ------------------------------------------------------->
+                        
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Main Content -->
-<!--------------------------------------------copy stuffs below to add content ------------------------------------------------------->    
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!--
+                    <h2 class="section-heading">用這個來寫標題</h2>
+                    <p>用這個寫內文</p>
+                    <p>\(...inline latex use this tag...\)</p>
+                    <p>$$...Out-of-line latex use this tag...$$</p>
+                    <blockquote>用這個寫註解</blockquote>
+                -->                        
 
-                <div class="post-preview">
-                    <a href="1_Three_Basic_Type.html">
-                        <h2 class="post-title">
-                            [熱傳] ㄧ、熱傳學基本概念
-                        </h2>
-                        <h3 class="post-subtitle">
-                            斯斯有三種，熱傳也有三種...
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a>Fernando Lin</a> on 09 12, 2016</p>
+<!------------------------------------------------ contents goes here  ------------------------------------------------------->
+
+               <p>穩態分析的另一個應用是分析 <b>鰭片</b>。鰭片是一個凸出的表面，用突起增加的表面積來達到散熱的效果...</p>
+               <h2 class="section-heading">鰭片方程式</h2>
+               <p>既然鰭片是個突起的表面，那麼他可以用三個量加以描述：總長\(L\)，截面積\(A(x)\)，截面周長\(P(x)\)。一切的分析都從這三樣東西開始。</p>
+               <p>假設距離原點\(x\)處有一個厚度為\(x + dx\)的切片。進出這個切片的能量有3，分別是：</p>
+               <p>1. \(x\)處，截面的熱傳。</p>
+               <p>2. \(x + dx\)處，截面的熱傳。</p>      
+               <p>3. 這個厚度為\(dx\)的切片，與空氣接觸表面的熱對流。</p>
+               <p>分別找出這三個量，就可以求得鰭片方程式。接下來就分別找出他們：</p>
+               <h2 class="section-heading">1. \(x\)處，截面的熱傳。</h2>
+               <p>這部分又要請出 <b>傅立葉熱傳定律</b>了，回憶一下一維的傅立葉熱傳定律：</p>
+               <p>$$\dot{Q} = -kA\frac {dT} {dx}$$</p>
+               <p>所以，位置為x處傳導形成的熱流是：</p>
+               <p>$$\dot{Q}(x) = {-kA\frac {dT} {dx}} \bigg | _{x}$$</p>
+               <h2 class="section-heading">2. \(x + dx\)處，截面的熱傳。</h2>
+               <p>這跟上面又幾乎一樣，只是把帶入範圍從\(x\)變成\(x + dx\)：</p>
+               <p>$$\dot{Q}(x + dx) = {-kA\frac {dT} {dx}} \bigg | _{x + dx}$$</p>
+
+    
+
+<!------------------------------------------------ contents goes here  ------------------------------------------------------->
+
+
                 </div>
-
-                <hr>
-<!--------------------------------------------copy stuffs above to add content ------------------------------------------------------->    
-                
-                 <div class="post-preview">
-                    <a href="2_Steady_State.html">
-                        <h2 class="post-title">
-                            [熱傳] 二、Steadey State Analysis
-                        </h2>
-                        <h3 class="post-subtitle">
-                            萬丈公式Steady-State起...
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a>Fernando Lin</a> on 09 13, 2016</p>
-                </div>
-
-                <hr>
-
-<!--------------------------------------------copy stuffs above to add content ------------------------------------------------------->    
-
-                <div class="post-preview">
-                    <a href="3_Fin.html">
-                        <h2 class="post-title">
-                            [熱傳] 三、鰭片
-                        </h2>
-                        <h3 class="post-subtitle">
-                            LA FIN...
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a>Fernando Lin</a> on 09 18, 2016</p>
-                </div>
-
-                <hr>
-
- <!--------------------------------------------copy stuffs above to add content ------------------------------------------------------->                                   
-
-                <!-- Pager -->
-                <ul class="pager">
-                    <li class="next">
-                        <!-- <a href="#"> -->
-                            No Older Posts &rarr;
-                        <!-- </a> -->
-                    </li>
-                </ul>
             </div>
         </div>
-    </div>
+    </article>
 
     <hr>
 
@@ -193,7 +179,7 @@
     <script src="../../vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../..vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Contact Form JavaScript -->
     <script src="../../js/jqBootstrapValidation.js"></script>
