@@ -195,11 +195,13 @@
                     <p>那能不能讓要用資料的人自己去sync？可以！O_RSYNC有這個功能。O_RSYNC是「有人要讀的時候，再把kernal buffer更新到disk上」。</p>
                     <p>這些東西都可以混用，比如說可以O_RSYNC & O_OSYNC。然後OSX會有不一樣的巨集。</p>
                     <p>Linux不知道哪一個版本之後就把O_DSYNC跟O_OSYNC合併了，因為File Imformation通常遠小於Data內容。</p>
-                    <p>「現在中午了，如果你請你同學幫你買便當，他拿了錢就跑，你也不知道是怎麼一回事，這就是blocking; 40分鐘之後你等他拿便當回來了，這就是synchronized。
+                    <blockquote>
+                        <p>師：「現在中午了，如果你請你同學幫你買便當，他拿了錢就跑，你也不知道是怎麼一回事，這就是blocking; 40分鐘之後你等他拿便當回來了，這就是synchronized。
                         他跟你說「我買完打電話給你」，這就是non-blocking。那有Asynchronized的例子嗎？」</p>
-                    <p>(安靜)</p>
-                    <p>樓下那台餐車就是Asynchrnized啊！那就是個buffer。(指)那裡118巷就是你的storage device。</p>    
-
+                        <p>(安靜)</p>
+                        <p>生：「...有人幫忙買好了？」</p>
+                        <p>師：「對。樓下那台餐車就是Asynchrnized，那就是個buffer。如果你買不到的話(搖指)那裡118巷就是你的storage device。」</p>    
+                    </blockquote>
                     
                     
 
