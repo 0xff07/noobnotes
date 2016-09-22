@@ -173,9 +173,37 @@
                     </blockquote>
                     <p>另外，也要有一個方法描述一個晶格中原子的相對位置，這裡的方法就很直覺， <b>暴力從原點畫出一條向量[h k l]</b>就可以了。當然也可以用向量減法來做。這種描述方法叫Miller Indeces of lattice direction。</p>
                     <p>(例子)</p>
+
                     <blockquote cite="">
-                        <p>Miller Indices of Lattice Direction用 <b>中括號</b>。</p>
+                        <ul>
+                            <li><p>3個數字中間沒有逗號。</p></li>
+                            <li><p>Miller Indices of Lattice Direction用 <b>中括號</b>。</p></li>
+                            <li><p>平行的面會有一樣的構造，所以視為一樣，Miller Indices也一樣</p></li>
+                        </ul>                                             
                     </blockquote>
+                    <blockquote cite="">
+                        <p>$$\left \{100\right \}表示{(100), (010), (001), (\bar{0}10), (0\bar{1}0), (00\bar{1})}這些平面的集合，叫做「family\space\space of\space plane」$$</p>
+                        <p>$$<100>表示{[100], [010], [001], [\bar{0}10], [0\bar{1}0], [00\bar{1}]}這些方向的集合，叫做「family\space\space of\space direction」$$</p>
+                        
+                    </blockquote>
+
+  
+
+                    <h2 class="section-heading">Miller - Bravais Indices</h2>
+                    <blockquote cite="">
+                        Miller Indices for HCP
+                    </blockquote>
+                    <p>把Miller Indeces推廣到HCP上。方法是 <b>多新增一個維度</b></p>
+                    <p>這是一個HCP構造：</p>
+                    <img class = "img-responsive" src="1_res/6_Miller_Bravais.png" alt="">
+                    <p>在底面設3個軸x-y-z，高度另外設一個軸w。這時候會有一個問題：空間中自由度只有3，四個座標會導致表法不唯一，該如何處理？</p>
+                    <p>解：新增一個相依條件 i + j + k = 0</p>
+                    <blockquote cite="">
+                        通常是i, j, k先隨便找兩個，然後再用i + j + k = 0求出剩下那一個。
+                    </blockquote>
+                    <p>另外，因為可能有很多組表達方法，所以原則是要讓(hkil)跟[hkil]數字比例要盡量簡單。</p>
+
+                    
 
 <!-------------------------------------------------------------------content goes here  --------------------------------------------------------------->
                 </div>

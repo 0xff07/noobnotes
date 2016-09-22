@@ -173,7 +173,7 @@
                     </blockquote>
                     <p>把Miller Indeces推廣到HCP上。方法是 <b>多新增一個維度</b></p>
                     <p>這是一個HCP構造：</p>
-                    <img class = "img-responsive" src="6_Miller_Bravais.png" alt="">
+                    <img class = "img-responsive" src="Week2_res/6_Miller_Bravais.png" alt="">
                     <p>在底面設3個軸x-y-z，高度另外設一個軸w。這時候會有一個問題：空間中自由度只有3，四個座標會導致表法不唯一，該如何處理？</p>
                     <p>解：新增一個相依條件 i + j + k = 0</p>
                     <blockquote cite="">
@@ -193,8 +193,76 @@
                         <li>grain boundary晶界(裡面不純物的濃度會最高，就像掃地最後掃的地方垃圾越多。這會影響到物質的融點)</li>
                     </ul>                   
                     <p>雖然有樹枝狀結構，但是結晶的均勻度是一種指標， 一般會希望Dendrite越少越好。</p>
-                    
 
+                    <h2 class="section-heading">Phase Diagram相平衡圖</h2>
+                        <p>純金屬的溶解與凝固現象：「Solidification」</p>
+                            <ul>
+                            <li><p>成核(過冷度)</p></li>
+                            <li><p>生長(樹枝狀結構)</p></li>
+                            </ul>
+                           
+                        <p>相平衡圖之製法(for binary phase diagram)</p>
+                            <ul>
+                                <li><p>Thermal Analysis</p>
+                                    <img class = "img-responsive" src="Week2_res/1_binary_phase_diagram.svg" alt="">
+                                    <p>這是一個「全率互溶型」的，表示兩種物質都可以無限互溶。這個圖的上界叫做「液相線(liquidus)」，下界叫「固相線(solidus)」。</p>
+                                </li>
+                                <li><p>相圖的推導</p>
+                                    <p>(那3個圖)</p>
+                                </li>
+                            </ul>
+                        <p>相律</p>
+                        <ul>
+                            <li><p>由熱力學導出，是支配物質態(material state)平衡關係的重要法則：</p>
+                                <p>$$F = n - r + 2$$</p>
+                                <p>$$F : degree \space of \space freedom$$</p>
+                                <p>$$n : no. \space of \space components$$</p>
+                                <p>$$r : no. \space of \space phases$$</p>
+                                <p>後面那個2，是表示「溫度」與「壓力」兩個變量。</p>
+                                
+                            </li>
+                            <li><p>舉例來說，我想知道水三向平衡時，那會是個「三向點」、「三向線」，還是「三向面」？只要帶入相律：</p>
+                                <p>$$F = 1 - 3 + 2 = 0$$</p>
+                                <p>因為F = 0，所以是個0維的東西，也就是三像共存時，在T - P圖上是一個點。</p>
+                                <p>那水有沒有可能四相共存？一樣可以用相律驗證。假設有四項共存，則自由度為：</p>
+                                <p>$$F = 1 - 4 + 2 = -1$$</p>
+                                <p>很顯然自由度不能比0小。所以相律預測不可能存在。</p>
+                            </li>
+                            <li><p>再舉例如純鐵的相圖：</p>
+                                <img class = "img-responsive" src="Week2_res/2_pure_iron_phase_disgram.png" alt="">
+                                <p>可以發現他還是只有3相點。</p>
+                            </li>
+                            <li><p>再舉例來說，如果你想要固定壓力，那麼只又把相律改成：</p>
+                                <p>$$F = n - r + 1$$</p>
+                                <p>因為溫度與壓力有一個自由度被強制固定了，所以少一個自由度。</p>
+                                <p>所以一個Cu - Zn系統，在定壓下：</p>
+                                <ul>
+                                    <li><p>2相平衡時，$$F = 2 - 2 + 1 = 1$$是一條線。</p></li>
+                                    <li><p>3相平衡時，$$F = 2 - 3 + 1 = 0$$是一個點。是一個點的狀況，叫做「invariant condition」</p></li>
+                                </ul>
+                            
+                            </li>
+                            <li>二元相平衡圖</li>
+                                <ul>
+                                    <li><p>固溶體(solid solution)：主要有3種：</p>
+                                        <img class = "img-responsive" src="Week2_res/3_solid_solution.jpg" alt="">
+                                        <p>有三種，分別是置換式(原子大小差不多時)、插入式(原子間大小差很多時)</p>
+                                    </li>
+                                    <li><p>金屬間化合物(intermetallis)：比如\(Fe_{3}C\)</p></li>
+                                </ul>
+                            <li><p>相圖也可以有3元的，也就是立體的。不過在閱讀上很難懂。</p></li>
+                        </ul>
+
+                        <p>全率固溶型：</p>
+                        <ul>
+                        <img src="Week2_res/4_level_rule.png" alt="">
+                        <p>這個圖上有一些特別的線可以注意一下。首先，隨便畫一條線，這裡是LS。那麼這就是一條「繫線」</p>
+                        <li><p>繫線(tie line)：LS連線，一條向圖上的橫線。繫線可以知道當下凝固出來的金屬中，AB比例是多少。只要你把現左右延伸到固相線與液相線兩端就可以了。
+                                在這個例子中，析出的固體中，A 的比例佔\(W_{l}\)，B的比例佔\(W_{s}\)</p>
+                        </li>
+                        <li><p>當繫線往下移動時，可以由交點發現<b>析出固體中，A的比例會漸少，B的比例會漸多</b>。</p></li>
+                        <li><p>雖然理論上來說，每一刻析出的固體，AB比例應該都會不一樣>但是<b>如果凝固速度夠慢，不同層之間會彼此擴散</b>，所以最後就可以形成大致均勻的晶體。這種現象就叫「偏析(segregation)」</p></li>
+                        </li>
 
 <!-------------------------------------------------------------------content goes here  --------------------------------------------------------------->
                 </div>

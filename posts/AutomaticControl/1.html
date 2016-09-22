@@ -319,6 +319,33 @@
                         <p>等等，到這裡是不是少了什麼？沒錯！就是我們親愛的<b>Inverse Laplace Transform</b></p>
 
 
+                        <h2 class="section-heading">Inverse Laplace Trandform</h2>
+                        <p>我們再多看Inverse Laplace Transform的原始定義：</p>
+                        <p>$$\mathcal{L}^{-1} [F(s)] = \frac {1} {2 \pi j}\int_{C-jw}^{C+jw}F(s)e^{st}ds$$</p>                        
+                        <p>可以注意到這個是個再複平面上的積分。我們想用Resdiue Theorem，但是Residue Theorem必須要在<b>封閉曲線積分</b>才能使用。
+                            不過，我們可以先用一個過C點的左半圓，像這樣：</p>
+                         <img class = "img-responsive" src="1_res/1_residue_infty_integral.png" alt="">   
+                        <p>然後把這個半圓的半徑趨近無窮，然後看到這個積分長怎樣：</p>
+                        <p>$$\lim_{a \to \infty} \frac {1} {2 \pi j} \oint_{半圓} F(s)e^{st}ds = 直徑部分積分 + 半圓部分積分$$</p>
+                        <p>分別把這兩部分寫出來，也就是：</p>
+                        <p>$$\lim_{a \to \infty} \frac {1} {2 \pi j}\int_{C-a}^{C+a}F(s)e^{st}ds + \lim_{a \to \infty}\frac {1} {2 \pi j}(半圓路徑積分)$$</p>    
+                        <p>這樣看起來，左邊跟那一項跟我們要的無窮積分有87％像啊！但是還了差一點點，後面的「半圓部分積分」不知道是什麼，怎麼辦？這裡有一個好消息：
+                            <b>大部分的情況下，<a target = "blank" href="https://zh.wikipedia.org/wiki/留数定理#.E4.BE.8B.E5.AD.90"> 「半圓路徑積分會是0</a></b>。這樣就<b>把無窮積分變成環路積分的極限了</b>，也就是：</p>
+                        <p>$$\mathcal{L}^{-1} [F(s)] = \frac {1} {2 \pi j}\int_{C-jw}^{C+jw}F(s)e^{st}ds = \lim_{a \to \infty} \frac {1} {2 \pi j} \oint_{半圓} F(s)e^{st}ds$$</p>    
+                        <p>既然這是個環路積分，接下來就是使用<b>Residue Theorem使用的時機了。</b>回顧一下我們真的要求的那個積分：</p>
+                        <p>$$\lim_{a \to \infty} \frac {1} {2 \pi j} \oint_{半圓} F(s)e^{st}ds$$</p>
+                        <p>那麼只要把所有的留數求出來，然後再加起來乘上\(2 \pi j\)就可以了。不過你發現Inverse Laplace Transform的分母已經有個\(2 \pi j\)了，所以更簡單：所有留數加起來就好。</p>
+                        <p>現在舉個例子：假設你有一個函數長這樣：</p>
+                        <p>$$F(s) = \frac {1} {(s + 2)(s + 3)(s + 77)^{2}}$$</p>
+                        <p>然後你要算他的Inverse Laplace Transform。所以你看了看上面，然後你想：「我要找出\(F(s)e^{st}\)所有的pole，然後找出全部的Residue，然後加起來...」</p>
+                        <p>所以你就找了第一個pole，也就是-2。</p>
+                        <blockquote>
+                        <p>1. 左右同乘\((s + 2)\)，所以你把左式的\((s + 2)\)遮住消掉，得到\(\frac {e^{st}} {(s + 3)(s + 77)}\)。
+                        <p>2. 接著你知道要故意帶-2。</p>
+                        <p>3. 所以，你就會得到\(\frac {e^{-2t}} {(-2 + 3)(-2 + 77)}\)</p>
+                        </blockquote>
+
+
 <!-------------------------------------------------------------------content goes here  --------------------------------------------------------------->
                 </div>
             </div>
