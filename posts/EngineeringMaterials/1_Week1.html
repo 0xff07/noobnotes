@@ -167,12 +167,16 @@
                     <p>$$\frac {x} {a} + \frac {y} {b} + \frac {z} {c} = 1$$</p>
                     <p>然後定義：</p>
                     <p>$$h = \frac {1} {a}, \space k = \frac {1} {b}, \space l = \frac {1} {c}$$</p>
-                    <p>並且把 (h k l)約分到最簡。這樣就可以用3個整數(可以有負數，上面會有一槓)來描述一個平面。這一組數對就叫做Miller Indices of lattice plane</p>
+                    <p>並且把 (h k l)約分到最簡。這樣就可以用3個整數(可以有負數，上面會有一槓)來描述一個平面。這一組數對就叫做Miller Indices of lattice plane。大概的概念像這樣：</p>
+                    <p><img class = "img-responsive" src="1_res/7_Miller_indices_for_cubic_plane.png" ></p>
+
                     <blockquote cite="">
                         這個平面必須通過原子，不然視為沒有意義。
                     </blockquote>
-                    <p>另外，也要有一個方法描述一個晶格中原子的相對位置，這裡的方法就很直覺， <b>暴力從原點畫出一條向量[h k l]</b>就可以了。當然也可以用向量減法來做。這種描述方法叫Miller Indeces of lattice direction。</p>
-                    <p>(例子)</p>
+                    <p>這其實跟<b>找法向量的最簡整數比</b>是同一回事。雖然課本用截距倒數的觀點，但我更喜歡用法向量來看，一位這樣目測起來比較快，而且你可以偷渡<b>外積</b>來當作一般性算法。</p>
+                    <p>另外，也要有一個方法描述一個晶格中原子的相對位置。因為原子可以視為一個點，所以這裡的方法就很直覺， <b>暴力從原點畫出一條向量[h k l]</b>，然後把他化成<b>最簡整數比</b>就可以了。
+                        當然也可以用向量減法來做。這種描述方法叫Miller Indeces of lattice direction。像這樣：</p>
+                    <p><img class = "img-responsive" src="1_res/8_Indices_miller_direction_exemples.png" alt=""></p>
 
                     <blockquote cite="">
                         <ul>
@@ -181,11 +185,12 @@
                             <li><p>平行的面會有一樣的構造，所以視為一樣，Miller Indices也一樣</p></li>
                         </ul>                                             
                     </blockquote>
-                    <blockquote cite="">
-                        <p>$$\left \{100\right \}表示{(100), (010), (001), (\bar{0}10), (0\bar{1}0), (00\bar{1})}這些平面的集合，叫做「family\space\space of\space plane」$$</p>
-                        <p>$$<100>表示{[100], [010], [001], [\bar{0}10], [0\bar{1}0], [00\bar{1}]}這些方向的集合，叫做「family\space\space of\space direction」$$</p>
-                        
-                    </blockquote>
+                    <p>另外，有另外一種表達法來表達類似平面的或類似方向的集合，他們分別是：</p>
+                    <ul>
+                        <li><p>family of plane：$$用大括號\left \{100\right \}，表示{(100), (010), (001), (\bar{0}10), (0\bar{1}0), (00\bar{1})}這些平面的集合$$</p></li>
+                        <li><p>family of direction：$$用角括號，<100>表示{[100], [010], [001], [\bar{0}10], [0\bar{1}0], [00\bar{1}]}這些方向的集合$$</p></li>
+                     </ul>   
+                    
 
   
 
@@ -193,14 +198,16 @@
                     <blockquote cite="">
                         Miller Indices for HCP
                     </blockquote>
-                    <p>把Miller Indeces推廣到HCP上。方法是 <b>多新增一個維度</b></p>
+                    <p>把Miller Indeces推廣到HCP上。因為HCP用直角座標很容易帶來痛苦，所以為了減輕痛苦<b>多新增一個維度</b></p>
                     <p>這是一個HCP構造：</p>
-                    <img class = "img-responsive" src="1_res/6_Miller_Bravais.png" alt="">
+                    <img class = "img-responsive" src="1_res/6_Miller_Bravais.svg" alt="">
                     <p>在底面設3個軸x-y-z，高度另外設一個軸w。這時候會有一個問題：空間中自由度只有3，四個座標會導致表法不唯一，該如何處理？</p>
-                    <p>解：新增一個相依條件 i + j + k = 0</p>
+                    <p>做法很簡單：<b>新增一個相依條件 i + j + k = 0</b></p>
                     <blockquote cite="">
                         通常是i, j, k先隨便找兩個，然後再用i + j + k = 0求出剩下那一個。
                     </blockquote>
+                    <p><a href="https://www.youtube.com/watch?v=vK913oWl_XI">這裡</a>有一個HCP的簡單例子。</p>
+                    <p>不過，這樣一來就不太能用「法相量」的觀點來看待平面的方向了。</p>
                     <p>另外，因為可能有很多組表達方法，所以原則是要讓(hkil)跟[hkil]數字比例要盡量簡單。</p>
 
                     
@@ -258,17 +265,17 @@
 <!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
 <!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
     <!-- jQuery -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Contact Form JavaScript -->
-    <script src="../js/jqBootstrapValidation.js"></script>
-    <script src="../js/contact_me.js"></script>
+    <script src="../../js/jqBootstrapValidation.js"></script>
+    <script src="../../js/contact_me.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="../js/clean-blog.min.js"></script>
+    <script src="../../js/clean-blog.min.js"></script>
 <!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
 <!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
    
