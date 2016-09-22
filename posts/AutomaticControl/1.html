@@ -137,7 +137,7 @@
                             pole其實是對複含數用Laurent Series展開時，所有會讓分母變成0的數字。除了這樣，pole還有不同的<b>階數</b>，比如說：
                          <p>$$G(s) = \frac {s} {{(s+1)}^2}$$</p>
                          <p>這樣來說，他的Laurent Series就是：</p>
-                         <p>$$G(s) = \frac {s} {{(s+1)}^2}$$</p>
+                         <p>$$G(s) = \frac {s + 1 - 1} {{(s+1)}^2} = \frac {1} {{(s+1)}} + \frac {-1} {{(s+1)}^2}$$</p>
                          <p>根本一樣嘛！沒錯，Laurent Series就是這麼簡單，如果不知道他是什麼，暫時把它當成除了有\((s+1)^0, (s+1)^1...(s+1)^n...\)這些項以外，
                              還出現\(\frac {1} {(s+1)}, \frac {1} {(s+1)^2}...\frac {1} {(s+1)^n}...\)的泰勒級數好了。回到正題，在這個Laurent Series中，帶進去會爆掉得項，只到-2次方而已，
                              所以這個pole就是2階的pole。</p>
@@ -177,7 +177,10 @@
                         <p>其中</p>
                         <p>$$C要是個比最右邊的Pole還右邊$$</p>
                         <p>因為複數平面有<b>Coutour Deformation Theorem</b>，所以只要有包到該包到的pole，\(C\)是什麼並不重要，反正包住的pole一樣，積出來的結果就一樣。</p>
-                        <p>你可你會想「尛？這麼醜的東西我要怎麼用？」問得好！正是因為她很醜，所以簡化他的理論非常重要，那就是傳說中的<b>留數定律(Residue Theorem)</b>！</p>
+                        <p>不過大家一開始學做Inverse Laplace Tansform的做法都不是這個，而是這樣：</p>
+                        <p>$$\frac {1} {(s + 2)(s + 3)(s + 77)^{2}} =  \frac {A} {(s + 2)} + \frac {B} {(s + 3)} + \frac {C} {(s + 77)^2} + \frac {D} {(s + 77)}$$</p>
+                
+                        <p>也就是利用<b>部分分式(Partial Fraction Decomposition)</b>來算。你可能會想「尛？這麼醜的東西我要怎麼用？」問得好！正是因為她很醜，所以簡化他的理論非常重要，那就是傳說中的<b>留數定律(Residue Theorem)</b>！</p>
 
                         <h2 class="section-heading">Residue Theorem</h2>
                         <p>再看一眼剛剛<s>溫馨</s>的Inverse Laplace Transform積分：</p>
@@ -199,7 +202,7 @@
                         <p>.</p>
                         <p>「不過等十年就表示我要把你自控<b>當掉</b>十次，這樣有點累。所以我決定叫你花十分鐘看完下面的東西就好。」</p>
                         
-                        <h2 class="section-heading">Residue...前的開胃菜</h2>
+                        <h2 class="section-heading">開胃菜</h2>
                         <p>留數(residue)是什麼？這個要從一個老掉牙的微積分問題開始說：</p>
                         <p>請積分以下的函數：</p>
                         <p>$$\int \frac {1} {(s + 2)(s + 3)(s + 77)^{2}}ds$$</p>
@@ -344,6 +347,22 @@
                         <p>2. 接著你知道要故意帶-2。</p>
                         <p>3. 所以，你就會得到\(\frac {e^{-2t}} {(-2 + 3)(-2 + 77)}\)</p>
                         </blockquote>
+
+                        <p>等等，這樣好像跟剛剛那個老掉牙的積分問題(又)有87%像啊？可是想一下如果叫你用一般的方法做Inverse Laplace Transform你會怎麼做：</p>
+                        <ul>
+                            <li><p>首先，先把\(F(s) = \frac {1} {(s + 2)(s + 3)(s + 77)^{2}}\)拆成\(\frac {A} {(s + 2)} + \frac {B} {(s + 3)} + \frac {C} {(s + 77)^2} + \frac {D} {(s + 77)}\)</p></li>
+                            <li><p>等等，這跟剛剛剛剛做的那些事情好像有點像？</p></li>
+                            <li><p>然後把pole帶到指數次方上面去...這樣跟求\(F(s)e^{st}\)的Residue不就是一模一樣的事了嗎？</p></li>
+                        </ul>
+                        <p>沒錯，正是這樣。<b>Residue Theorem做的Inverse Laplace Transform最終會導出我們一開始學的Inverse Laplace Trandform方法</b>。不過這也很合理，
+                            因為:</p>
+                            <ul>
+                               <li><p>做Inverse Laplace Trandform要找Residue</p></li>
+                               <li><p>找residue就是在找Partial Fraction 係數</p></li>
+                               <li><p>找Partial Fraction係數，就會回到最一開始我們學的Inverse Laplace Transform作法</p></li> 
+                            </ul>
+                         <p>所以，其實在Residue Theorem是一個橋樑，揭示數學形式的Inverse Laplace Trandform其實與直覺上的Inverse Laplace Trandform並無二致，兩者具有相同的意義。</p>   
+
 
 
 <!-------------------------------------------------------------------content goes here  --------------------------------------------------------------->
