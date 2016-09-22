@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<!-------------------------------------------------------------title goes here  --------------------------------------------------------------------->
+<!-------------------------------------------------------------title goes here  --------------------------------------------------------------------->
+    <title>[自控]一、LT的物理與LTI系統</title>
+<!-------------------------------------------------------------title goes here  --------------------------------------------------------------------->
+<!-------------------------------------------------------------title goes here  --------------------------------------------------------------------->
+
+
+    <!-- Bootstrap Core CSS -->
+<!---------------------------------------------------------Change CSS relative position here  -------------------------------------------------------->    
+<!---------------------------------------------------------Change CSS relative position here  -------------------------------------------------------->
+    <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="../../css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<!---------------------------------------------------------Change CSS relative position here  -------------------------------------------------------->
+<!---------------------------------------------------------Change CSS relative position here  -------------------------------------------------------->
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- 下面這行加入Math Jax 的 LaTex CDN -->
+    <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->        
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->        
+                <a class="navbar-brand" href="../../index.html">Noob Notes</a>
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->        
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->        
+            </div>
+
+
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+                    <li>
+                        <a href="../../index.html">Latest</a>
+                    </li>
+                    <li>
+                        <a href="../../about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="../../category.html">Category</a>
+                    </li>
+                    <!--
+                    <li>
+                        <a href="../contact.html">Contact</a>
+                    </li>
+                    -->
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+<!---------------------------------------------------------Change URL relative position here  ------------------------------------------------------->   
+<!---------------------------------------------------------Change URL relative position here  ------------------------------------------------------->   
+    <header class="intro-header" style="background-image: url('img/header_img.jpg')">
+<!---------------------------------------------------------Change URL relative position here  ------------------------------------------------------->   
+<!---------------------------------------------------------Change URL relative position here  ------------------------------------------------------->   
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+<!-------------------------------------------------------------------header goes here  --------------------------------------------------------------->
+<!-------------------------------------------------------------------header goes here  --------------------------------------------------------------->
+                        <h1>[自控]一、LT的物理與LTI系統</h1>
+                        <h2 class="subheading">LT與LTI？傻傻分不清楚</h2>
+                        <span class="meta">Posted by <a>Fernando Lin</a> on 09, 23, 2016</span>
+<!-------------------------------------------------------------------header goes here  --------------------------------------------------------------->
+<!-------------------------------------------------------------------header goes here  --------------------------------------------------------------->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!--
+                    <h2 class="section-heading">用這個來寫標題</h2>
+                    <p>用這個寫內文</p>
+                    <p>\(...inline latex use this tag...\)</p>
+                    <p>$$...Out-of-line latex use this tag...$$</p>
+                    <blockquote>用這個寫註解</blockquote>
+                -->                        
+<!-------------------------------------------------------------------content goes here  --------------------------------------------------------------->
+                        <blockquote cite="">
+                            <p>天上掉下來一個Laplace Transform，但是用Laplace Transform並不是那麼天經地義...</p>
+                            
+                        </blockquote>
+                        <h2 class="section-heading">Laplace Transform的性質</h2>
+                        <p>真是溫馨的一幕，繼工數之後又跟Laplace Transform重逢了！不知道算驚喜還是驚嚇。</p>
+                        <ol>
+                        <li>
+                            <p>Time Domain 微分</p>
+                            <p>$$\mathcal{L} [\frac {df(t)} {dt}] = sF(s) - f(0)$$</p>
+                            <p>現在我們用訊號與系統的觀點來看：在t域微分之後，會導致s域多了一個在0的Zero，這是什麼意思？Zero有「過濾訊號」的功能(因為跟他相同頻率的訊號會跟他上下相消)，
+                                所以在s = 0的Zero，表示\(\frac {1} {s}\)訊號會被他過濾掉。回憶一下\(\frac {1} {s}\)在t域什麼？沒錯，就是「常數」，在訊號當中就是<b>DC訊號</b>(直流電是一條平的嘛)。那在t域當中這又代表了什麼呢？你猜到了，常數微分等於0。
+                                就是說：<b>$$t域微分等於多一個過濾DC的濾波器$$</b>
+                            </p>
+                            <p>這個定理可以再推廣到高次微分，也就是：</p>
+                            <p>$$\mathcal{L} [\frac {d^{n}f(t)} {dt^{n}}] = s^{n}F(s) -[s^{n-1}f(0) \space + \space s^{n - 2}f'(0)\space+\space s^{n - 3}f^{(2)}(0)\space+ ...sf^{(n-1)}(0)]$$</p>
+                            <p>我記減法項的方法是「s的次數跟為分次數相加為(n-1)」。不過在解ODE時，有更方便的做法。</p>
+                        </li>
+                        <li>
+                            <p>Time Domain積分</p>
+                            <p>$$\mathcal {L} [\int_{0}^{t} f(\tau) d\tau] = \frac {1} {s} F(s)$$</p>
+                            <p>Pole會把相同頻率的訊號放大，比如說再s域中有\(\frac {1} {s - a}\)的一階pole，這時候如果再送\(\frac {1} {s - a}\)訊號進來，那就會多出\(\frac {1} {(s - a)^{2}}\)項，也就是\(te^{at}\)項，
+                                而\(te^{at}\)項顯然振動幅度就比\(e^{at}\)大了，如果送其他訊號，就只會有\(e^{at}\)會出現。積分就相當於把DC訊號放大，所以反映在s域的s=0 pole 上。
+                            </p>
+                        </li>
+                        <li>
+                            <p>時間位移</p>
+                            <p>$$\mathcal{L} [f(t - T)u(t - T)] = \frac{F(s)} {e^{sT}}$$</p>
+                            <p>這裡用一下頻率響應F(jw)的概念。把s = jw帶入，會發現：</p>
+                            <p>$$\frac{F(jw)} {e^{jwT}} = F(jw)e^{-jwT}$$</p>
+                            <p>因為\(| e^{-jwT} | = 1\)，所以\(| F(jw)e^{-jwT} | = |F(jw)|\)，也就是說<b>時域平移並不影響頻率響應的震幅，只會影響相位</b>。而這也恰好符合在時域中平移的意義。
+                            另外，「T的符號與\(e^{sT}\)冪次相反」，也可以從這裡看出來，因為時間向右平移，相位就變慢(漸少)，所以\(e^{-jwT}\)的次方中會是\(-jwT\)而不是\(jwT\)</p>
+                        </li>
+                        <li>
+                            <p>Initial Value Theorem & Final Value Theorem</p>
+                            <p>$$\lim_{s \to \infty} sF(s) = f(0)$$</p>
+                            <p>$$\lim_{s \to 0} sF(s) = \lim_{t \to \infty}f(t)，假定系統有穩態$$</p>
+                            <p>因為t趨近無窮，頻率s就趨近於零; 反之因為t趨近0，頻率s就趨近於無窮。這個好處是不用做inverse也可以找出想要的初值或終值。
+                                另外，雖然實際上沒有「無窮」長的時間，但實際上，無窮的\(\epsilon - \delta\)意義剛好可以幫助預測「要求誤差小於一定值時，需要多少時間」。
+                            </p>
+                        </li>
+                        <li>
+                            <p>Complex Shift</p>
+                            <p>$$\mathcal{L}[e^{at}f(t)] = F(s-a)$$</p>
+                            <p>這個定理可以想成Modulation，乘上\(e^{at}\)可以把它想成是用一個envelope去包本來的訊號，而載波的功能就是把全部的Pole跟Zero通通往右平移\(a\)。</p>
+                        </li>
+                        <li>
+                            <p>Convolution</p>
+                            <p>$$\mathcal{L}[f(t) * g(t)] = F(s)G(s)$$</p>
+                            <p>這個東西就是<b>LTI系統</b>中Transfer Function存在的關鍵。為什麼這麼說？請往下看。</p>
+                        </li>
+                        </ol>
+
+                        <h2 class="section-heading">LTI系統的本質</h2>
+                        <blockquote cite="">
+                            <p>LTI系統是「Linear Time Invariant」系統的簡稱，顧名思義他要是Linear與Time Invariant。這兩個優良性質讓Laplace Trandform可以在上面發揮得很好...</p>
+                        </blockquote>
+                        <p>LTI系統，顧名思義就是要L(線性)，TI(非實變)。線性的意思比較好懂，假設今天有\(r_{1}(t)\)與\(r_{2}(t)\)兩個輸入，以及一個「系統」\(G\)，這個「系統」會將一個訊號轉成另外一個訊號，比如說：</p>
+                        <p>$$r_{1}(t)\overset{G}{\rightarrow}y_{1}(t)$$</p>
+                        <p>意思就是輸入\(r_{1}(t)\)給G系統，G系統會輸出\(y_{1}(t)\)這個訊號。\(r_{2}(t)\)的輸出也用類似方法定義好了：</p>
+                        <p>$$r_{2}(t)\overset{G}{\rightarrow}y_{2}(t)$$</p>
+                        <p>那麼，線性的意思就是<b>線性組合的輸入會等於個別輸出的線性組合</b>，像這樣：</p>
+                        <p>$$ar_{1}(t) + br_{2}(t)\overset{G}{\rightarrow}ay_{1}(t) + by_{2}(t)$$</p>
+                        <p>先線性組合再輸出，跟個別輸出再做線性組合，會得到相同結果，這就是線性系統。不過， 因為G會把<b>以函數為輸入，並且輸出另外一個函數</b>，聽起就像函數的函數，所以通常不會寫箭頭，而是這樣寫：</p>
+                        <p>$$G[r_{1}(t)] = y_{1}(t),\space G[r_{2}(t)] = y_{2}(t) \\[1cm] \Rightarrow G[ar_{1}(t) + br_{2}(t)] = ay_{1}(t) + by_{2}(t)$$</p>
+                        <p>線性的問題解決了，接下來是非時變「Time Invariant」。非時變的概念也很簡單：「你晚一點輸入跟剛剛相同的輸出，系統也會吐一樣的結果給你」</p>
+                        <p>$$G[r(t)] = y(t) \\[1cm] \Rightarrow G[r(t - T)] = y(t - T)$$</p>
+                        <p>你一定在想「蛤？這看起來不是廢話嗎？」可是仔細想一想，現實生活中好像不一定會是這樣。比如說系統有可能生鏽、有髒污所以電阻變高，那就不會一直是原來的系統。這裡就把這些細節忽略掉。</p>
+                        <p>搞定了線性、非時變，那這兩個性質又有什麼好處？接下就要說明這件事。首先我們要做一個小伎倆，這個伎倆跟<b>Delta Function</b> \(\delta (t)\)有關係。更明確的說，是跟\(\delta (t)\)的「挑選性質」有關。
+                            先來回顧一下\(\delta (t)\)的挑選性質：</p>
+                        <p>$$f(a) = \int_{-\infty}^{\infty}f(a)\delta (t - a)da$$</p>
+                        <p>因為\(\delta (t - a\))就是一根在\(a\)的東西，除了在\(a\)以外其他地方都是0，但是積分積過去要是1。\(\delta (t - a)\)黏上一個\(f(a)\)再積分，就會把\(a\)以外的地方通通乘上0，只有\(a\)那一點也就是乘f(\(a\))。
+                            乘完之後再積過去，本來的1就要放大成f(\(a\)) \(\cdot\) 1，結果就出來了。</p>
+                         <p>接下來要用它做一個神奇的Trick：剛剛的挑選性質只把t = a的地方挑出來，那麼對任意的t：</p>
+                         <p>$$f(t) = \int_{-\infty}^{\infty}f(\tau)\delta (t - \tau)d\tau$$</p>
+                         <p>這個意思是說，<b>一個完整的函數，可以視為用許許多多的delta function，把每一個\(f(\tau)\)「挑選」出來，最後再把所有取到的東西組合(積分)起來</b>。</p>
+                         <p>接下來，把這個神奇的積分丟到系統G裡面：</p>
+                         <p>$$G \space [\int_{-\infty}^{\infty}f(\tau)\delta (t - \tau)d\tau] = y(t)$$</p>
+                         <p>因為積分只是比較華麗的加法，所以隱約有一種「G其實是在對很多小Delta Function取出的小sample，連續的進行轉換」，這樣「線性」這個條件就變得很有利。那就朝這個方向試試看會發生什麼事：</p>
+                         <p>$$G \space [\int_{-\infty}^{\infty}f(\tau)\delta (t - \tau)d\tau] = G\space [\sum_{i}r(\tau_{i})\delta (t - \tau_{i})\Delta \tau], \Delta \tau \to 0$$</p>
+                         <p>再來是最關鍵的一步：<b>G是線性的</b>，所以\(\Delta \tau\)可以提出來。另外，又因為<b>G是線性的</b>，所以\(\sum\)先做後做沒有差，所以把他提到G外面：</p>
+                         <p>$$G\space [\sum_{i}r(\tau_{i})\delta (t - \tau_{i})\Delta \tau] = \sum_{i} G[r(\tau_{i}) \delta(t - \tau_{i})]\Delta\tau$$</p>
+                         <p>然後還是因為<b>G是線性的</b>，G才不鳥裡面變數是什麼，<s>G很棒，學學G</s>，他只知道他是線性，所以大大方方的把\(r(\tau_{i})\)從G當中拉出來也是可以der：</p>
+                         <p>$$\sum_{i} G[r(\tau_{i}) \delta(t - \tau_{i})]\Delta\tau = \sum_{i} r(\tau_{i})G[\delta(t - \tau_{i})]\Delta \tau$$</p>
+                         <p>這樣看起來，發現<b>似乎只要知道\(G[\delta(t)]\)，就可以完全決定這個積分是什麼了</b>。是嗎？可是這裡每個\(\delta(t)\)都有被平移過\(\tau\)啊？誰知道他們在不同時間跑進系統，輸出有沒有一樣啊？
+                            你猜到了，這時候就是<b>Time Invariant</b>條件該使用的地方了!今天我們令：</p>
+                         <p>$$G[\delta(t)] = h(t)$$</p>
+                         <p>那麼Time Invariant條件告訴我們：</p>
+                         <p>$$G[\delta(t)] = h(t) \\[1cm] \Rightarrow G[\delta(t - \tau_{i})] = h(t - \tau_{i})$$</p>
+                         <p>所以回到原來的式子：</p>
+                         <p>$$\sum_{i} r(\tau_{i}) G[\delta(t - \tau_{i})]\Delta \tau = \sum_{i}r(\tau_{i}) h(t - \tau_{i})\Delta \tau$$</p>
+                         <p>嗯...這樣就夠了，然後我們再讓\(\Delta \tau \to 0\)，把它寫成積分：</p>
+                         <p>$$\int_{-\infty}^{\infty} r(\tau) h(t - \tau)d \tau$$</p>
+                         <p>好了，最神奇的一部已經詮釋完了。接下來呢？接下來...接下來...咦？這積分好像有點眼熟...<b>他跟convolution根本有87%相似嘛！！</b></p>
+                         <p>沒錯，這就是convolution最精華的地方!把上面的積分寫成convolution的話：</p>
+                         <p>$$y(t) = G[r(t)] = \int_{-\infty}^{\infty} r(\tau) h(t - \tau)d \tau = r(t) * h(t)$$</p>
+                        <p> 其中 $$h(t) = G[\delta(t)]$$</p>
+                         <p>也就是說，<b>只要事先知道以\(\delta (t)\)輸入G的結果\(h(t) = G[\delta(t)]\)</b>，以後所有輸入，都可以用\(h(t)\)求得，方法就是跟\(h(t)\)做convolution
+                            $$y(t) = r(t) * h(t)$$</p>
+                        <p>這個現象的物理意義在於：你可以把輸入連續地切成許多細條(也就是脈衝)，因為LTI，所以每一小條輸入造成的輸出都只差某個倍率，又因為LTI對每個小脈衝的輸出可以疊加。所以任何輸出，都只是無數多個小脈衝造成的輸出連續地疊加起來形成而已。</p>                          
+                        <p>既然都看到Convolution了，當然要變本加厲再取個Laplact Trandform啊！</p>
+                         <p>$$Y(s) = \mathcal{L}[r(t) * h(t)] = R(s)H(s)$$</p>
+                         <p>其中</p>
+                         <p>$$ R(s)是輸入的Laplace \space Transform$$</p>
+                         <p>$$H(s)是G[\delta (t)]的Laplace \space Transform$$</p>
+                        <p>$$Y(s)是輸出之Laplace\space Transform$$</p>
+                        <p>因為<b>\(H(s)\)是系統以脈衝函數\(\delta(t)\)作為輸入時的輸出</b>(的LT)，所以又叫「<b>脈衝響應</b>(Impulse Response)」。
+                         而因為只要給定輸入函數 \(R(s)\)，\(H(s)\)就可以透過\(H(s)R(s)\)來得出輸出，所以它<b>描述了輸入與輸出之間的關係</b>，
+                         因此又叫(免責聲明：其實我不是很懂為什麼要叫做這個名字)「轉移函數(Transfer Function)」。</p>
+
+                     <p>因為LTI系統的優良性質，所以我們可以在只知道一個具有代表性的輸出的情況下，就完全掌握系統的所有輸出。而掌握了他，就掌握了整個系統的性質。</p>    
+
+
+
+<!-------------------------------------------------------------------content goes here  --------------------------------------------------------------->
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a>
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/profile.php?id=100001416766501">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/0xff07">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; Yo-Jung Lin 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+    <!-- jQuery -->
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="../../js/jqBootstrapValidation.js"></script>
+    <script src="../../js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="../../js/clean-blog.min.js"></script>
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+   
+
+
+
+
+</body>
+
+</html>
