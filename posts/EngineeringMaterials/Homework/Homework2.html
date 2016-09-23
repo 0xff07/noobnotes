@@ -137,7 +137,7 @@
                             <p>其中F為在相圖上的維度(自由度); n 為金屬成份的種類; r為相的數目。</p>
                             <p>溫壓任何一個物理量要求固定時，則總自由度必須少1（如定壓更正為\(F = n - r + 1\)）。</p>
                             </li>
-                        <li><p>(unsure)invariant reaction：向圖上自由度為1的點。</p></li>
+                        <li><p>invariant reaction：當物質冷卻或加溫時，通過相圖上自由度為1的點時所發生的反應。</p></li>
                     </ol>
 
                     <h2 class="section-heading">2. </h2>
@@ -145,10 +145,40 @@
                     <ol>
                         <li><ul>
                             <li><p>segregation：在金屬混合物由液體凝固時，如果冷卻速度太快，或冷卻不均勻，不同時間凝固出的金屬間無法彼此擴散，將形成一層一層成分各不相同的金屬。</p></li>
-                            <li><p>dendrite：液態金屬凝固初期，形成的樹枝狀狀結構。</p></li></ul>
+                            <li><p>dendrite：液態金屬凝固初期，形成的樹枝狀狀結構。</p></li>
+                            <li><p>(圖待補)(電腦不方便R)</p></li>
+                            </ul>
+
                          </li>
                          <li><p>因為casting的金屬通常很多，所以沒辦法很均勻的冷卻，
                              而且casting時表面金屬通常冷卻速度遠比內部金屬快，因此不同時間凝固的金屬很難擴散均勻。所以容易有segregation發生。</p></li>   
+                    </ol>
+
+                    <h2 class="section-heading">3. </h2>
+                    <ol>
+                        <li><p>圖可以發現有一個\( L \overset{300^{\circ} C} {\rightarrow} \alpha + \beta\)的共晶點。</p></li>
+                        <li><p>根據level rule，\(\alpha\)與\(\beta\)的比例，和該點到兩相固相線的距離成反比，因此：</p>
+                            <p>$$W_{\alpha}:W_{\beta} = \frac {1} {60 - 16} : \frac {1} {86 - 60} = 26 : 44$$</p>
+                            <p>因此\(\alpha\)的比例為：</p>
+                            <p>$$\alpha \% = \frac {26} {26 + 44} \cdot 100 \% = 37.1 \%$$</p>
+                        </li>
+                        <li>
+                            <p>接下來要求比例相反，也就是40%R的狀況。這時候他的過程會是：</p>
+                            <ol>
+                                <li><p>經過\(\alpha + L\)區域時，形成初晶，一直到300度邊界的前一刻，假定沒有segregation發生，則依照level rule：</p>
+                                    <p>$$W_{liquid} : W_{\alpha} = 1 : 1$$</p>
+                                    <p>也就是這時的成分是：</p>
+                                    <p>$$\alpha：50 \%$$</p>
+                                    <p>$$L：50\%$$</p>
+                                </li>
+                                <li><p>接著跨過300度邊界的那瞬間，50%的L變成晶體。依照level rule，析出晶體中，\(\alpha\)與\(\beta\)比例為：</p>
+                                    <p>$$W_{\alpha, L} : W_{\beta, L} = \frac{1}{2}:\frac{1}{1} = 2:1$$</p>
+                                    <p>因此截至目前，\(\alpha與\beta\)的比例為：</p>
+                                    <p>$$\alpha：50\%(初晶)+50\% \cdot \frac {2} {3}(L析出) = 83.3 \% \\ \beta = 50\% \cdot \frac {1}{3}(只有L析出) = 16.7\%$$</p>
+                                </li>
+                                <li><p>接著通過congruent point，這時候100%變成\(\sigma\)態，因此\(\alpha與\beta\)的比率皆為0</p></li>
+                            </ol>
+                        </li>
                     </ol>
                     <h2 class="section-heading">6. </h2>
                     <p>使用GNU plot套件畫：</p>
