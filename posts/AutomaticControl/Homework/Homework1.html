@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<!-------------------------------------------------------------title goes here  --------------------------------------------------------------------->
+<!-------------------------------------------------------------title goes here  --------------------------------------------------------------------->
+    <title>[自控]作業一</title>
+<!-------------------------------------------------------------title goes here  --------------------------------------------------------------------->
+<!-------------------------------------------------------------title goes here  --------------------------------------------------------------------->
+
+
+    <!-- Bootstrap Core CSS -->
+<!---------------------------------------------------------Change CSS relative position here  -------------------------------------------------------->    
+<!---------------------------------------------------------Change CSS relative position here  -------------------------------------------------------->
+    <link href="../../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="../../../css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<!---------------------------------------------------------Change CSS relative position here  -------------------------------------------------------->
+<!---------------------------------------------------------Change CSS relative position here  -------------------------------------------------------->
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- 下面這行加入Math Jax 的 LaTex CDN -->
+    <script type="text/javascript" src="../../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->        
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->        
+                <a class="navbar-brand" href="../../../index.html">Noob Notes</a>
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->        
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->        
+            </div>
+
+
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+                    <li>
+                        <a href="../../../index.html">Latest</a>
+                    </li>
+                    <li>
+                        <a href="../../../about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="../../../category.html">Category</a>
+                    </li>
+                    <!--
+                    <li>
+                        <a href="../../contact.html">Contact</a>
+                    </li>
+                    -->
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+<!---------------------------------------------------------Change URL relative position here  ------------------------------------------------------->   
+<!---------------------------------------------------------Change URL relative position here  ------------------------------------------------------->   
+    <header class="intro-header" style="background-image: url('../header_img.jpg')">
+<!---------------------------------------------------------Change URL relative position here  ------------------------------------------------------->   
+<!---------------------------------------------------------Change URL relative position here  ------------------------------------------------------->   
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+<!-------------------------------------------------------------------header goes here  --------------------------------------------------------------->
+<!-------------------------------------------------------------------header goes here  --------------------------------------------------------------->
+                        <h1>作業一</h1>
+                        <h2 class="subheading">我看到像是把後面的東西出出成作業。</h2>
+                        <span class="meta">Posted by <a>Fernando Lin</a> on 09, 23, 2016</span>
+<!-------------------------------------------------------------------header goes here  --------------------------------------------------------------->
+<!-------------------------------------------------------------------header goes here  --------------------------------------------------------------->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!--
+                    <h2 class="section-heading">用這個來寫標題</h2>
+                    <p>用這個寫內文</p>
+                    <p>\(...inline latex use this tag...\)</p>
+                    <p>$$...Out-of-line latex use this tag...$$</p>
+                    <blockquote>用這個寫註解</blockquote>
+                -->                        
+<!-------------------------------------------------------------------content goes here  --------------------------------------------------------------->
+                     
+                    <h2 class="section-heading">1. </h2>
+                    <p>Positive Feedback就是回授拉成正的，也就是回授跟輸入同相位; Negative Feedback就是回授拉成負的，也就是與原輸入相位相反。負回授的優勢是<b>有機會比較穩定</b>。比如說有一個plan G</p>
+                    <p>$$G = \frac {1} {(s - 2)}$$</p>
+                    <p>很明顯因為pole在右邊，所以直接輸入的輸出一定炸。如果幫他拉個unity feedback的正回授：</p>
+                    <p>$$H(s) = \frac {\frac{1}{s - 2}}{1 - \frac{1} {s - 2}} = \frac{1} {s - 3}$$</p>
+                    <p>發現他會死給你看。</p>
+                    <p>如果不用unity feedback，而是乘上一個正數a再拉回授，他還是死給你看：</p>
+                    <p>$$H(s) = \frac {\frac{1}{s - 2}}{1 - \frac{a} {s - 2}} = \frac{1} {s - a - 2}$$</p>
+                    <p>但是如果用負回授拉feedback：</p>
+                    <p>$$H(s) = \frac {\frac{1}{s - 2}}{1 + \frac{a} {s - 2}} = \frac{1} {s - 2 + a}$$</p>
+                    <p>然後就發現<b>a > 2的時候，stability通通考一百分惹！</b></p>
+                    <p>直觀的詮釋就是拉正回授看起來就會讓輸入跟輸出加成，變成更大的輸入再丟進系統，形成更大的輸出，然後無限迴圈。所以看起來就很容易爆。
+                        但是負回授feedback回來的訊號永遠跟當前的訊號相反，所以輸入與輸出偏向彼此相消，因此有機會比較穩定。
+                    </p>
+                    <p>負回授的例子比如說電子學在用Op Amp時，大部分功能都要用負回授。不過這是因為Op Amp本身的A值通常很大，
+                        如果直接使用這個很陡峭的轉移曲線，還要抓DC Bias根本抓不到。所以類比加法、積分、微分器都有負回授(不過我是小廢廢，只上過電子一沒上過電子學實驗)。</p>
+                    <p>負回授會增加穩定性，那正回授的用就恰好相反，就是用在故意不讓他穩定的時候。比如說振盪器通常就用正回授。</p>    
+
+                
+
+
+                    <br><br><br><hr>
+                    <h2 class="section-heading">2. </h2>
+                    <p>這一條顯然是：</p>
+                    <p>$$y(t) = \delta(t) * u(t)$$</p>
+                    <p>impulse response就是\(\delta(t)\)。所以取個Laplace Trandform：</p>
+                    <p>$$Y(s) = 1 \cdot H(s) \Rightarrow \frac{Y(s)}{H(s)} = 1$$</p>
+                    <p>因此：</p>
+                    <p>$$H(s) = 1$$</p>
+                    <p>#</p>
+                    
+             
+                    <br><br><br><hr>
+
+
+                    <h2 class="section-heading">3. </h2>
+                    <p>不確定多詳細的答案。不過剛好前一陣子在自己網頁上Po了一點東西，所以決定走一個Copy & Paste路線：</p>
+                       <p>首先做一個小伎倆，回顧一下\(\delta (t)\)的挑選性質：</p>
+                        <p>$$f(a) = \int_{-\infty}^{\infty}f(a)\delta (t - a)da$$</p>
+                         <p>那麼對任意的t：</p>
+                         <p>$$f(t) = \int_{-\infty}^{\infty}f(\tau)\delta (t - \tau)d\tau$$</p>
+                         <p><b>一個完整的函數，可以視為用許許多多的delta function，把每一個\(f(\tau)\)「挑選」出來，最後再把所有取到的東西組合(積分)起來</b>。</p>
+                         <p>接下來，把這個神奇的積分丟到系統G裡面：</p>
+                         <p>$$G \space [\int_{-\infty}^{\infty}f(\tau)\delta (t - \tau)d\tau] = y(t)$$</p>
+                         <p>因為積分只是比較華麗的加法，所以隱約有一種「G其實是在對很多小Delta Function取出的小sample，連續的進行轉換」。所以線性變得有利。為了使用線性，寫成\(\sum\)：</p>
+                         <p>$$G \space [\int_{-\infty}^{\infty}f(\tau)\delta (t - \tau)d\tau] = G\space [\sum_{i}r(\tau_{i})\delta (t - \tau_{i})\Delta \tau], \Delta \tau \to 0$$</p>
+                         <p>再來是最關鍵的一步：<b>G是線性的</b>，所以\(\Delta \tau\)可以提出來。另外，又因為<b>G是線性的</b>，所以\(\sum\)先做後做沒有差，所以把他提到G外面：</p>
+                         <p>$$G\space [\sum_{i}r(\tau_{i})\delta (t - \tau_{i})\Delta \tau] = \sum_{i} G[r(\tau_{i}) \delta(t - \tau_{i})]\Delta\tau$$</p>
+                         <p>然後還是因為<b>G是線性的</b>，G才不鳥裡面變數是什麼，<s>G很棒，學學G</s>，他只知道他是線性，所以大大方方的把\(r(\tau_{i})\)從G當中拉出來也是可以der：</p>
+                         <p>$$\sum_{i} G[r(\tau_{i}) \delta(t - \tau_{i})]\Delta\tau = \sum_{i} r(\tau_{i})G[\delta(t - \tau_{i})]\Delta \tau$$</p>
+                         <p>這樣看起來，發現<b>似乎只要知道\(G[\delta(t)]\)，就可以完全決定這個積分是什麼了</b>。不過還差一點點。因為<b>時間中的平移對稱性一般來說不保證</b>。但開宗明義說這是LTI系統了。也就是：</p>
+                         <p>$$G[\delta(t)] = h(t)$$</p>
+                         <p>那麼Time Invariant條件告訴我們：</p>
+                         <p>$$G[\delta(t)] = h(t) \\[1cm] \Rightarrow G[\delta(t - \tau_{i})] = h(t - \tau_{i})$$</p>
+                         <p>所以回到原來的式子：</p>
+                         <p>$$\sum_{i} r(\tau_{i}) G[\delta(t - \tau_{i})]\Delta \tau = \sum_{i}r(\tau_{i}) h(t - \tau_{i})\Delta \tau$$</p>
+                         <p>嗯...這樣就夠了，然後我們再讓\(\Delta \tau \to 0\)，把它寫成積分：</p>
+                         <p>$$\int_{-\infty}^{\infty} r(\tau) h(t - \tau)d \tau$$</p>
+                         <p>好了，最神奇的一部已經詮釋完了。接下來呢？接下來...接下來...咦？這積分好像有點眼熟...<b>他跟convolution根本有87%相似嘛！！</b></p>
+                         <p>這就是convolution最精華的地方～把上面的積分寫成convolution的話：</p>
+                         <p>$$y(t) = G[r(t)] = \int_{-\infty}^{\infty} r(\tau) h(t - \tau)d \tau = r(t) * h(t)$$</p>
+                        <p> 其中 $$h(t) = G[\delta(t)]$$</p>
+                         <p>也就是說，<b>只要事先知道以\(\delta (t)\)輸入G的結果\(h(t) = G[\delta(t)]\)</b>，以後所有輸入，都可以用\(h(t)\)求得，方法就是跟\(h(t)\)做convolution
+                            $$y(t) = r(t) * h(t)$$</p>
+                        <p>物理意義在於：你可以把輸入連續地切成許多細條(也就是脈衝)，因為LTI，所以每一小條輸入造成的輸出都只差某個倍率，又因為LTI對每個小脈衝的輸出可以疊加。所以任何輸出，都只是無數多個小脈衝造成的輸出連續地疊加起來形成而已。</p>                          
+                        <p>既然都看到Convolution了，當然要變本加厲再取個Laplact Trandform啊！</p>
+                         <p>$$Y(s) = \mathcal{L}[r(t) * h(t)] = R(s)H(s)$$</p>
+                         <p>其中</p>
+                         <p>$$ R(s)是輸入的Laplace \space Transform$$</p>
+                         <p>$$H(s)是G[\delta (t)]的Laplace \space Transform$$</p>
+                        <p>$$Y(s)是輸出之Laplace\space Transform$$</p>
+                        <p>因為<b>\(H(s)\)是系統以脈衝函數\(\delta(t)\)作為輸入時的輸出</b>(的LT)，也就是「<b>脈衝響應</b>(Impulse Response)」。
+                         而因為只要給定輸入函數 \(R(s)\)，\(H(s)\)就可以透過\(H(s)R(s)\)來得出輸出，所以它<b>描述了輸入與輸出之間的關係</b>，
+                         也就是所謂的(免責聲明：其實我不是很懂為什麼要叫做這個名字)「轉移函數(Transfer Function)」。</p>
+
+                         <p>簡而言之，因為LTI系統的優良性質，所以我們可以在只知道一個具有代表性的輸出的情況下，就完全掌握系統的所有輸出。方法就是Convolution，或是做s域相乘。</p>
+                         
+                         <p>#</p>
+                         
+
+                          
+
+                    <br><br><br><hr>
+                    <h2 class="section-heading">4. </h2>
+                    <p>$$f(x) = 3x^2 + (x-2)^2 - 2xcos(x)$$</p>
+                    <p>因為我很笨，只學過電子學的<b>小信號模型</b>，所以我打算在這裡用小信號模型。不過小信號模型也需要一個直流工作點，而題目並沒有說可以用這個。但是我就是想用，不然這題我就不知道要怎麼寫惹。
+                        假定直流工作點在\(x = x_{d}\)，則在\(x_{d}\)附近的點可以展開成：</p>
+                    <p>$$f(x) = f'(x_{d})(x - x_{d}) + f(x_{d})$$</p>   
+                    <p>然後把\(f'(x) = 6x + 2x - 4 - 2cos(x) + 2xsin(x)\)用\(x_{d}\)代入：</p>
+                    <p>$$f'(x_{d}) = 8x_{d} - 2cos(x_{d}) + 2x_{d} sin(x_{d}) -4$$</p>
+                    <p>以及：</p>
+                    <p>$$f(x_{d}) =  3x_{d}^{2} + (x_{d}-2)^2 - 2x_{d}cos(x_{d})$$</p>
+                    <p>最後再帶入原式，得到：</p>
+                    <p>$$f(x) = (8x_{d} - 2cos(x_{d}) + 2x_{d} sin(x_{d}) -4)(x - x_{d}) + 3x_{d}^{2} + (x_{d}-2)^2 - 2x_{d}cos(x_{d})$$</p>
+                    <p>因為我很懶，不想化簡，<s>而且寫程式開編譯器優化會自動幫忙做常數折疊</s>。如果助教很堅持要化簡的話分數就送你吧(遞</p>
+                    <p>辛苦助教惹。</p>
+                 
+
+
+                    
+
+                  
+
+                 
+                   
+                    
+
+
+<!-------------------------------------------------------------------content goes here  --------------------------------------------------------------->
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a>
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/profile.php?id=100001416766501">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/0xff07">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; Yo-Jung Lin 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+    <!-- jQuery -->
+    <script src="../../../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="../../../js/jqBootstrapValidation.js"></script>
+    <script src="../../../js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="../../../js/clean-blog.min.js"></script>
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+   
+
+
+
+
+</body>
+
+</html>
