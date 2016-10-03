@@ -10,7 +10,7 @@
     <meta name="author" content="">
 <!-------------------------------------------------------------title goes here  --------------------------------------------------------------------->
 <!-------------------------------------------------------------title goes here  --------------------------------------------------------------------->
-    <title>Writing Structure</title>
+    <title>Coco's Quest</title>
 <!-------------------------------------------------------------title goes here  --------------------------------------------------------------------->
 <!-------------------------------------------------------------title goes here  --------------------------------------------------------------------->
 
@@ -102,9 +102,9 @@
                     <div class="post-heading">
 <!-------------------------------------------------------------------header goes here  --------------------------------------------------------------->
 <!-------------------------------------------------------------------header goes here  --------------------------------------------------------------->
-                        <h1>Writing Structure</h1>
+                        <h1>Coco's Quest</h1>
                         <h2 class="subheading">餓死抬頭</h2>
-                        <span class="meta">Posted by <a>Fernando Lin</a> on 10, 3, 2016</span>
+                        <span class="meta">Posted by <a>Fernando Lin</a> on 09, 21, 2016</span>
 <!-------------------------------------------------------------------header goes here  --------------------------------------------------------------->
 <!-------------------------------------------------------------------header goes here  --------------------------------------------------------------->
                     </div>
@@ -129,48 +129,40 @@
                      
                     
                     <h2 class="section-heading">餓死抬頭～～</h2>
-                    <p>這裡先講構思文章的方法。構思文章的方法其實就是那些：</p>
-                    <p></p>
-                    <ul>  
-                        <li><p><b>clustring(畫心智圖)</b></p></li>
-                        <li><p><b>outlining(寫下大綱)</b>：好處是不會離題。</p></li>
-                        <li><p>或是DT的便利貼。</p></li>
-                    </ul>
-                    <h2 class="section-heading">Abstract, Summarize, Paraphrase</h2>
-                    <p>先來個名詞解釋</p>
-                    <ul>
-                        <li><p>Summarize：可以翻成「總結」。你可以總結很多段。</p></li>
-                        <li><p>Abstract：整篇文章的總結。如果有翻過Paper的話就會知道了。</p></li>
-                        <li><p>Paraphrase：「改寫」。把東西用自己的話重寫一遍。注意要先<b>找出出處</b>（否則容易有剽竊嫌疑）。</p></li>
-                    </ul>
-                    <p>引述注意事項(看那篇文章)：要先<b>呈現原始意思</b>，再寫出自己的評論。想像一下如果你要反駁人，總不能一開始就曲解別人的意思吧？</p>
-                    <p>debug範文：</p>
-                    <ol>
-                        <li><p>沒有引用出處</p></li>
-                        <li><p>斷章取義原文意思。就不然只取一兩句，就會變成<s>台灣記者好棒棒</s>。</p></li>
-                        <li><p>過度延伸、曲解原作者的意思</p></li>
-                        
-                    </ol>
-                    <p>老師講課講到的：</p>
-                    <ul>
-                        <li><p>雖然要呈現作者的原始意思，但是<b>不要照抄原文！不要照抄原文！不要照抄原文！</b>因為這看起來像自己沒有吸收原文意思，有剽竊嫌疑。</p></li>
-                        <li><p>作者並沒有說disappointment，但是卻擅自把它加進去了</p></li>
-                        <li><p>把所有「傳統男人」講成「沙文主義者」，這個並不是好的推斷。</p></li>
-                        <li><p>然後，最後一段有As a result...把「女人一個人住」通通歸因於「傳統價值觀」，並不合邏輯。</p></li>
-                    </ul>
-                    <p>所以投影片上總結是：</p>
-                    <ol>
-                        <li><p>The paraphrase is too similar to the original text</p></li>
-                        <li><p>Only partial information is paraphrased.</p></li>
-                        <li><p>...(看投影片)</p></li>
-                    </ol>
-                    
-                    <h2 class="section-heading">How to Paraphrase</h2>
-                    <ul>
-                        <li><p>Read Carefully</p></li>
-                        <li><p>看完一遍之後，把原文蓋住。回想一下剛剛看了什麼，然後寫。印象派。Echo Method。</p></li>
-                        <li><p>Document the source.</p></li>
-                    </ul>
+                    <p>要積兩個長得很神奇的東西：</p>
+                    <p>$$\int e^{ax}sin(bx)$$</p>
+                    <p>$$\int e^{ax}cos(bx)$$</p>
+                    <p>這個Trick是用尤拉公式。尤拉公式長下面這樣：</p>
+                    <p>$$e^{ix} = cos(x) + isin(x)$$</p>
+                    <p>或是高級一點的版本：</p>
+                    <p>$$e^{ibx} = cos(bx) + isin(bx)$$</p>
+                    <p>跟高中學的複數極式有87％像。因為他根本就是複數極式。</p>
+                    <p>尤拉公式要怎麼證？白話文就是<b>把ix代到\(e^{x}\)的泰勒展開式</b>，化簡之後就發先實部是cos的泰勒展開，虛部是sin的泰勒展開。然後就證完惹。</p>
+                    <p>回到那個積分。首先手癢把它加起來看看：</p>
+                    <p>$$\int e^{ax}sin(bx) + \int e^{ax}cos(bx) = \int e^{ax}(cos(bx) + sin(bx))$$</p>
+                    <p>然後就發現裡面的東西跟尤拉公式有87%像，只是差了個i。那乾脆把sin那坨乘個i再加起來，讓他跟尤拉公式變成100％像：</p>
+                    <p>$$\int e^{ax}cos(bx) + i \cdot \int e^{ax}sin(bx) = \int e^{ax}(cos(bx) + isin(bx))$$</p>
+                    <p><b>這裡注意一件事：右邊那條積分的實部會等於\(\int e^{ax}cos(bx)\)，虛部會等於\(\int e^{ax}sin(bx)\)。這很很很很很重要請把他畫重點。</b></p>
+                    <p>然後就發現裡面跟尤拉公式從87%像變成100％像了。這時當然是要把它寫成尤拉公式啊～～</p>
+                    <p>$$\int e^{ax}(cos(bx) + isin(bx)) = \int e^{ax}e^{ibx} = \int e^{ax + ibx} = \int e^{(a + ib)x}$$</p>
+                    <p>然後就發現<b>娘子快跟我出來看自然指數積分啊！</b></p>
+                    <p>$$\int e^{(a + ib)x} = \frac {e^{(a + ib)x}}{a + ib}$$</p>
+                    <p>可是\(e^{(a + ib)x} =  e^{a}e^{ibx} = e^{ax}cos(bx) + i \cdot e^{ax}sin(bx)\)。所以把他帶回剛剛跟娘子一起積的積分：
+
+                    </p>
+                    <p>$$\frac {e^{(a + ib)x}}{a + ib} = \frac { e^{ax}cos(bx) + i \cdot  e^{ax}sin(bx)} {a + ib}$$</p>
+                    <p>然後動點手腳化簡：</p>
+                    <p>$$\frac {e^{ax}cos(bx) + i \cdot  e^{ax}sin(bx)} {a + ib} =  (e^{ax}cos(bx) + i \cdot  e^{ax}sin(bx)) \frac {a - ib} {a^2 + b^2}$$</p>
+                    <p>然後再化簡，不過我順便把\(e^{ax}\)提出來，然後實部跟實部合併，虛部跟虛部合併：</p>
+                    <p>$$ (e^{ax}cos(bx) + i \cdot  e^{ax}sin(bx)) \frac {a - ib} {a^2 + b^2} = e^{ax}(cos(bx) + i \cdot  sin(bx)) \frac {a - ib} {a^2 + b^2} 
+                        \\[2cm] = \frac {e^{ax}} {a^2 + b^2}(a - bi)(cos(bx) + isin(bx))
+                        \\[2cm] = \frac {e^{ax}} {a^2 + b^2}[(a\cdot cos(bx) + bsin(bx)) + i(a \cdot sin(bx) - bcos(bx) )]$$</p>
+                    <p>然後剛剛說過：</p>
+                    <blockquote cite="">
+                        <p>這裡注意一件事：右邊那條積分的實部會等於\(\int e^{ax}cos(bx)\)，虛部會等於\(\int e^{ax}sin(bx)\)。這很很很很很重要請把他畫重點。</p>
+                    </blockquote>
+                    <p>所以看一下它的實部跟虛部，就會發現這跟剛剛積分對應的實部虛部根本就是一模一樣。然後就證完惹</p>    
+
 
 
 
