@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<!-------------------------------------------------------------title goes here  --------------------------------------------------------------------->
+<!-------------------------------------------------------------title goes here  --------------------------------------------------------------------->
+    <title>[計網]第三週</title>
+<!-------------------------------------------------------------title goes here  --------------------------------------------------------------------->
+<!-------------------------------------------------------------title goes here  --------------------------------------------------------------------->
+
+
+    <!-- Bootstrap Core CSS -->
+<!---------------------------------------------------------Change CSS relative position here  -------------------------------------------------------->    
+<!---------------------------------------------------------Change CSS relative position here  -------------------------------------------------------->
+    <link href="../../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="../../../css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<!---------------------------------------------------------Change CSS relative position here  -------------------------------------------------------->
+<!---------------------------------------------------------Change CSS relative position here  -------------------------------------------------------->
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- 下面這行加入Math Jax 的 LaTex CDN -->
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->        
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->        
+                <a class="navbar-brand" href="../../../index.html">Noob Notes</a>
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->        
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->        
+            </div>
+
+
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+                    <li>
+                        <a href=",./../../index.html">Latest</a>
+                    </li>
+                    <li>
+                        <a href="../../../about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="../../../category.html">Category</a>
+                    </li>
+                    <!--
+                    <li>
+                        <a href="../contact.html">Contact</a>
+                    </li>
+                    -->
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+<!---------------------------------------------------------Change URL relative position here  ------------------------------------------------------->   
+<!---------------------------------------------------------Change URL relative position here  ------------------------------------------------------->   
+    <header class="intro-header" style="background-image: url('../img/post-bg.jpg')">
+<!---------------------------------------------------------Change URL relative position here  ------------------------------------------------------->   
+<!---------------------------------------------------------Change URL relative position here  ------------------------------------------------------->   
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+<!-------------------------------------------------------------------header goes here  --------------------------------------------------------------->
+<!-------------------------------------------------------------------header goes here  --------------------------------------------------------------->
+                        <h1>[計網]第三週 + 第四週筆記</h1>
+                        <h2 class="subheading">Protocols, 一堆Protocols</h2>
+                        <span class="meta">Posted by <a>Fernando Lin</a> on 10, 5, 2016</span>
+<!-------------------------------------------------------------------header goes here  --------------------------------------------------------------->
+<!-------------------------------------------------------------------header goes here  --------------------------------------------------------------->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!--
+                    <h2 class="section-heading">用這個來寫標題</h2>
+                    <p>用這個寫內文</p>
+                    <p>\(...inline latex use this tag...\)</p>
+                    <p>$$...Out-of-line latex use this tag...$$</p>
+                    <blockquote>用這個寫註解</blockquote>
+                -->                        
+<!-------------------------------------------------------------------content goes here  --------------------------------------------------------------->
+                     
+                    <p>因為颱風放掉了～所以第三週跳過</p>
+                    <h2 class="section-heading">Internet Structure</h2>
+                    <p>其實整個網路是很鬆散的結構，不過還是有一些鬆散的分層。</p>
+                    <img class = "img-responsive" src="3_1_res/1_rough_layers.png" alt="">
+                    <p>網路是一個很肥大的組織，雖然很容易就可以加入，但是這也使得把網際網路用新技術全部翻新的難度變得很高。</p>
+
+                    <h2 class="section-heading">Internet Delay</h2>
+                    <p>packet delay的4個來源：</p>
+                    <ol>
+                        <li><p>nodal processing：思考要往哪個節點丟、檢查資料有沒有錯誤的時間</p></li>
+                        <li><p>queing：如果有其他packet先到，要等他們傳完。</p></li>
+                        <li><p>transmission delay：跟頻寬、packet大小有關。可以把它想成把packet「擠」過的過程。這個通常是整體速度的bottle neck</p></li>
+                        <li><p>propogation delay：就是出發走到下一個節點，經過路經需要的時間。</p></li>
+                    </ol>
+                    <p>可以把它想成高速公路的「人工收費站」。每個收票員拿票的時間就是transmission delay; 車子離開收費站，走到下一個收費站的時間，就是「propogation delay」。
+                        不過對於packet來說，傳播速度的數量及跟光速差不多，所以propogation delay遠小於transmission delay（所以就是很常會塞車的意思）</p>
+                    <p>Stall & Forward：要一個packet的所有bit都到齊之後，才會開始處理封包裡的資料。</p>
+                    <p>估算delay----Traceroute program：白話文就是丟幾個測試封包，然後測得到回應的時間再取個平均</p>
+                    <h2 class="section-heading">Packet Loss</h2>
+                    <p>就是不小心把封包弄丟了。</p>
+                    <p>有一些方法可以做到：</p>
+                    <ul>
+                        
+                    <p>請剛剛送過來的node重新發一次。</p>
+                    <p>TCP：Source 要負責檢查有沒有掉封包。</p>
+                    <p>UDP：不管，不見就不見。</p>
+                    
+                    </ul>
+
+                    <h2 class="section-heading">Throughput</h2>
+                    <p>實際能有多少資料流量。</p>
+                    <p>很顯然的，實際能夠傳輸的頻寬，會被傳輸能力最弱的ISP給限制住（就像最大流問題那樣）</p>
+                    <p>接下來就要進入最精華的protocals了！</p>
+                    
+
+
+                    
+<!-------------------------------------------------------------------content goes here  --------------------------------------------------------------->
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a>
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/profile.php?id=100001416766501">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/0xff07">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; Yo-Jung Lin 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+    <!-- jQuery -->
+    <script src="../../../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="../../../js/jqBootstrapValidation.js"></script>
+    <script src="../../../js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="../../../js/clean-blog.min.js"></script>
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+   
+
+
+
+
+</body>
+
+</html>
