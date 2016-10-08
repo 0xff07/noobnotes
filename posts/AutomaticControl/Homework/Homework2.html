@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<!-------------------------------------------------------------title goes here  --------------------------------------------------------------------->
+<!-------------------------------------------------------------title goes here  --------------------------------------------------------------------->
+    <title>[自控]作業二</title>
+<!-------------------------------------------------------------title goes here  --------------------------------------------------------------------->
+<!-------------------------------------------------------------title goes here  --------------------------------------------------------------------->
+
+
+    <!-- Bootstrap Core CSS -->
+<!---------------------------------------------------------Change CSS relative position here  -------------------------------------------------------->    
+<!---------------------------------------------------------Change CSS relative position here  -------------------------------------------------------->
+    <link href="../../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="../../../css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<!---------------------------------------------------------Change CSS relative position here  -------------------------------------------------------->
+<!---------------------------------------------------------Change CSS relative position here  -------------------------------------------------------->
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- 下面這行加入Math Jax 的 LaTex CDN -->
+    <script type="text/javascript" src="../../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->        
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->        
+                <a class="navbar-brand" href="../../../index.html">Noob Notes</a>
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->        
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->        
+            </div>
+
+
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+                    <li>
+                        <a href="../../../index.html">Latest</a>
+                    </li>
+                    <li>
+                        <a href="../../../about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="../../../category.html">Category</a>
+                    </li>
+                    <!--
+                    <li>
+                        <a href="../../contact.html">Contact</a>
+                    </li>
+                    -->
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+<!---------------------------------------------------------Change URL relative position here  ------------------------------------------------------->   
+<!---------------------------------------------------------Change URL relative position here  ------------------------------------------------------->   
+    <header class="intro-header" style="background-image: url('hello-world.png')">
+<!---------------------------------------------------------Change URL relative position here  ------------------------------------------------------->   
+<!---------------------------------------------------------Change URL relative position here  ------------------------------------------------------->   
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+<!-------------------------------------------------------------------header goes here  --------------------------------------------------------------->
+<!-------------------------------------------------------------------header goes here  --------------------------------------------------------------->
+                        <h1>作業二</h1>
+                        <h2 class="subheading">助教辛苦惹～～</h2>
+                        <span class="meta">Posted by <a>Fernando Lin</a> on 10, 08, 2016</span>
+<!-------------------------------------------------------------------header goes here  --------------------------------------------------------------->
+<!-------------------------------------------------------------------header goes here  --------------------------------------------------------------->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!--
+                    <h2 class="section-heading">用這個來寫標題</h2>
+                    <p>用這個寫內文</p>
+                    <p>\(...inline latex use this tag...\)</p>
+                    <p>$$...Out-of-line latex use this tag...$$</p>
+                    <blockquote>用這個寫註解</blockquote>
+                -->                        
+<!-------------------------------------------------------------------content goes here  --------------------------------------------------------------->
+                     
+                     <p><s>原來是電子學呀，我還以為是自控呢！</s></p>
+                    <h2 class="section-heading">1. </h2>
+                    <p>在不拉負回授的狀況下，輸入r與輸出y的關係為：</p>
+                    <p>$$y = r^{2}$$</p>
+                    <p>把這個關係式稍微做一下圖的話，可以得到：</p>
+                    <img clas = "img-responsive" src="Homework2_res/1-1_no_feedback.png" alt="">
+                    <p>接著要拉unity feedback。稍微做一下transfer function</p>
+                    <p>$$(r - y)^{2} = y$$</p>
+                    <p>暴力解出\(y\)與\(r\)的關係：</p>
+                    <p>$$r^{2} - 2ry + y^{2} = y$$</p>
+                    <p>稍微整理一下：</p>
+                    <p>$$y^{2} - (2r + 1)y + r^{2}= 0$$</p>
+                    <p>因此：</p>
+                    <p>$$y  = \frac {(2r-1) \pm \sqrt{(2r+1)^{2}-4r^{2}}}{2}
+                            = \frac {(2r-1) \pm \sqrt{4r + 1}}{2} 
+                        $$
+                    </p>
+                    <p>將兩者與剛剛的圖形一起繪出，可以得到如下的結果：</p>
+                    <img class = "img-responsive" src="Homework2_res/1-2all_with_feedback.png" alt="">
+                    <p>後者看起來幾乎是直的線。所以可以發現在[0, 4]之內，有unity feedback比開路還要來的線性。</p>
+
+                    <h2 class="section-heading">2. </h2>
+                    <p>\(y = ax^{3}\)如果要相切，要滿足兩個條件：</p>
+                    <ol>
+                        <li>過(0.6, 0.8)</li>
+                        <li>在(0.6, 0.8)斜率相等</li>
+                    </ol>
+                    <p>但是這樣會有兩個a。不過<s>真相只有一個</s>答案只能選一個，所以兩個都做做看，再挑一個看起來比較爽的好了。</p>
+                    <p>首先是只要求過[0.6, 0,8]。這時候顯然\(a = \frac{0.8}{0.6^{3}} = 3.7\)</p>
+                    <p>畫出原圖與\(y = 3.7x^{3}\)</p>
+                    <img class = "img-responsive" src="Homework2_res\2-1point.png" alt="">
+                    <p>接著畫出等斜率。但首先要求出a：</p>
+                    <p>$$y' = 3ax^{2} = 2 = 3a \cdot 0.6^{2}$$</p>
+                    <p>因此：</p>
+                    <p>$$a = \frac {2} {3 \cdot 0.6^{2}} = 1.85$$</p>
+                    <p>所以畫出來會長這樣：</p>
+                    <img src="Homework2_res\2-2slope.png" alt="">
+                    <p>所以怎麼看都應該選第一個，因為要在0.6附近用的話，前者顯然看起來比較準。那就針對它做線性逼近。在[\(0.6-\epsilon, 0.6+\epsilon\)]時：</p>
+                    <p>$$y' = 3.7 \cdot 3x^{2} = 11.1x^{2}$$</p>
+                    <p>$$y'(0.6) = 11.1 \cdot 0.6^{2} = 4$$</p>
+                    <p>且必須通過(0.6, 0.8)。所以線性化的結果就是：</p>
+                    <p>$$y = 4(x - 0.6) + 0.8$$</p>
+                    <p>延伸：如果用\(ax^{3} + b^{2}\)的話，就可做到完全的相切。
+                        另外，\(\epsilon\)具體範圍是多少，可以在附近可以用暴力算。那要怎麼找根？<b>Binary Search</b>即可。可是Binary Search不是要有單調性才能用嗎？嘿嘿，這就是微積分的奧妙了。</p>
+                    
+                    <h2 class="section-heading">3. </h2>
+                    
+                    <p>$$R \Rightarrow V = IR$$</p>
+                    <p>$$L \Rightarrow V = I'L$$</p>
+                    <p>$$C \Rightarrow V = \int I/Cdt$$</p>
+
+                    <p>所以繞\(i_{1}\)一圈，根據KVL：</p>
+                    <p>$$R_{1}(i_{1} + i_{2}) + \int (i_{1} + i_{2})/C_{1}dt + i_{1}^{\space '}L_{1} + i_{1}R_{2} = v(t)$$</p>
+                    <p>針對\(i_{2}\)迴圈：</p>
+                    <p>$$i_{1}^{\space '}L_{1} + i_{1}R_{2} = \int i_{2}/C_{2}dt + i_{2}R_{3} $$</p>
+                    <p>這就是題目要的兇惡的integrodifferential equations了。真是</p>
+
+                    <p>後記：一開始本來是暴力帶s域阻抗，然後再使用串並聯求出s域方程式，最後再把s換成微分符號。本來覺得這是超威的做法，結果事實證明這是一個自虐的做法。</p>
+
+                    <h2 class="section-heading">4. </h2>
+                    <p>(a)問0附近的現小信號模型長怎樣，所以就求各自的微分。在0處微分顯然是0，所以在[-0.5,0,5]：</p>
+                    <p>$$v_{o} = 0$$</p>
+                    <p>(b)問1附近的小信號模型，因為\(v^{'}_{o}(1) = 2 \cdot 1 = 2\)，而且過(1, 1)，所以[0.5, 1.5]的小信號模型是：</p>
+                    <p>$$v_{o} = 2(v_{in} - 1) + 1$$</p>
+                    <p>既然說了就要附<s>真相</s>圖。我這不就來了嗎：</p>
+                    <img class = "img-responsive" src="Homework2_res/4small_signal.png" alt="">
+
+
+
+
+
+
+
+                
+               
+                        
+
+                    
+
+
+                    
+
+                  
+
+                 
+                   
+                    
+
+
+<!-------------------------------------------------------------------content goes here  --------------------------------------------------------------->
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a>
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/profile.php?id=100001416766501">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/0xff07">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; Yo-Jung Lin 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+    <!-- jQuery -->
+    <script src="../../../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="../../../js/jqBootstrapValidation.js"></script>
+    <script src="../../../js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="../../../js/clean-blog.min.js"></script>
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+<!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
+   
+
+
+
+
+</body>
+
+</html>
