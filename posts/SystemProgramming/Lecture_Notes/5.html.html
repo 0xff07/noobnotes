@@ -10,7 +10,7 @@
     <meta name="author" content="">
 <!-------------------------------------------------------------title goes here  --------------------------------------------------------------------->
 <!-------------------------------------------------------------title goes here  --------------------------------------------------------------------->
-    <title>[工材]第四週筆記</title>
+    <title>[SP]第五週</title>
 <!-------------------------------------------------------------title goes here  --------------------------------------------------------------------->
 <!-------------------------------------------------------------title goes here  --------------------------------------------------------------------->
 
@@ -54,7 +54,7 @@
                 </button>
 <!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->        
 <!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->        
-                <a class="navbar-brand" href="../../../index.html">Noob Notes</a>
+                <a class="navbar-brand" href="../../index.html">Noob Notes</a>
 <!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->        
 <!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->        
             </div>
@@ -77,7 +77,7 @@
                     </li>
                     <!--
                     <li>
-                        <a href="../../contact.html">Contact</a>
+                        <a href="../contact.html">Contact</a>
                     </li>
                     -->
 <!---------------------------------------------------------Change html relative position here  ------------------------------------------------------->
@@ -93,7 +93,7 @@
     <!-- Set your background image for this header on the line below. -->
 <!---------------------------------------------------------Change URL relative position here  ------------------------------------------------------->   
 <!---------------------------------------------------------Change URL relative position here  ------------------------------------------------------->   
-    <header class="intro-header" style="background-image: url('../header_img.jpg')">
+    <header class="intro-header" style="background-image: url('../../../img/post-bg.jpg')">
 <!---------------------------------------------------------Change URL relative position here  ------------------------------------------------------->   
 <!---------------------------------------------------------Change URL relative position here  ------------------------------------------------------->   
         <div class="container">
@@ -102,9 +102,9 @@
                     <div class="post-heading">
 <!-------------------------------------------------------------------header goes here  --------------------------------------------------------------->
 <!-------------------------------------------------------------------header goes here  --------------------------------------------------------------->
-                        <h1>第四週筆記</h1>
-                        <h2 class="subheading">我看倒像一集鍛刀大賽</h2>
-                        <span class="meta">Posted by <a>Fernando Lin</a> on 10, 4, 2016</span>
+                        <h1>[SP]第三週筆記</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">Posted by <a>Fernando Lin</a> on 10, 5, 2016</span>
 <!-------------------------------------------------------------------header goes here  --------------------------------------------------------------->
 <!-------------------------------------------------------------------header goes here  --------------------------------------------------------------->
                     </div>
@@ -125,32 +125,45 @@
                     <p>$$...Out-of-line latex use this tag...$$</p>
                     <blockquote>用這個寫註解</blockquote>
                 -->                        
-<!-------------------------------------------------------------------content goes here  --------------------------------------------------------------->
+<!-------------------------------------------------------------------content goes here  ---------------------------------------------------------------->
                      
-                   
-                    <h2 class="section-heading">Plastic Deformation</h2>
-                    <ul>
-                        <li>slip and twin</li>
-                        <li>Dislocation Theory</li>
-                        <li>
-                            types:
-                            <ol>
-                                <li>edge dislocation : b 垂直 t</li>
-                                <li>screw dislocation : b 平行 t</li>
-                                <li>mixed dislocation</li>
-                            </ol>
-                            Burges Vector
-                            dislocation source and its multiplication:
-                            source:Frank-Read Source
-                        </li>
+            <h2 class="section-heading"></h2>
+            <p>一個檔案輸入輸出的流程：</p>
+            <img clss = "img-responsive" src="5_res/1_fileIO.png" alt="">
+            <ol>
+                <li>User Process 丟一個request給Kernal</li>
+                <li>Kernel 去 Storage 拿東西到Kernel Buffer（以Block為單位）（跟Cache的原理差不多）</li>
+                <li>最後再從Kernel Buffer拿給User Process</li>
+            </ol>
+            <p>這兩個效能瓶頸在兩個地方：</p>
+            <ol>
+                <li>每次拿一個東西，都會複製兩次</li>
+                <li>資料間要保持同步</li>
+            </ol>
 
-                    </ul>
+            <p>所以有一個天真的想法就是：把所有東西都放到Kernel 記憶體中，這樣要什麼就有什麼。但是這樣會至少有2個問題：</p>
+            <ol>
+                <li>多了很多不必要的複製</li>
+                <li>System Call頻繁，需要花很多時間在mode change上面(從user mode 跟 kernel mode中間)</li>
+            </ol>
+            <p>實驗：call一億次sqrt()與一億次getuid()</p>
+            <p>而且這樣不是很安全。</p>
+            <p>計算機組織也碰過這樣的問題，解法是弄一個Cache。這裡也是，多設一個user buffer～</p>
+            <h2 class="section-heading">Buffered I/O</h2>
+            <img class = "img-responsive" src="5_res/2_bufferedIO.png" alt="">
+            <p>這其實跟Cache相關議題的原理一樣。如果東西有在user buffer中，就省去從Kernel搬到User Memory的時間。</p>
+            <p>3種：</p>
+            <ol>
+                <li>fully buffered：把buffer全塞滿。適合資料小，又需要radom access的時候。不過如果程式突然崩潰，東西就會不見。</li>
+                <li>line buffered：碰到\n或buffer滿的時候。比如說Terminal</li>
+                <li>unbuffered：不用buffer, 直接輸出。比如說stderr</li>
+            </ol>
+            <p>buffer可以用setbuf()或setvbuf()設定。要在I/O前就設定好，不然會沒效。</p>
 
-                   
-                        
-                   
-      
+                    
 
+
+                    
 <!-------------------------------------------------------------------content goes here  --------------------------------------------------------------->
                 </div>
             </div>
