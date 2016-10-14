@@ -40,6 +40,12 @@
     <!-- 下面這行加入Math Jax 的 LaTex CDN -->
     <script type="text/javascript" src="../../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
+    <!-- 下面這行加入vim 顯示程式碼的主題 -->
+    <style type="text/css">
+        pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+    </style>
+   
+
 </head>
 
 <body>
@@ -225,8 +231,63 @@
                     </p>
 
                     <h2 class="section-heading">6.CP2.9 </h2>          
+                    <p>Code長這樣：</p>
+                    <pre id='vimCodeElement'>
+                        G = tf([1, 1], [1, 2])
+                        H = tf(1, [1, 1])
+
+                        %close loop function goes here:
+                        sys = G / (1 + G * H)
+
+                        %plot pole-zero plot:
+                        pzmap(sys)
+                    </pre>
 
 
+                    <p>然後他會說Transfer Function長這樣：</p>
+
+                    <pre id='vimCodeElement'>
+                    sys =
+ 
+                        s^3 + 4 s^2 + 5 s + 2
+                       ----------------------
+                       s^3 + 6 s^2 + 11 s + 6
+                    </pre>
+
+                    <p>稍微畫一下圖：</p>
+                    <img class = "img-responsive" src="Homework3_res/CP2_9.png" alt="">
+                    <p>可以發現在\(s = -2\)有一個pole-zero cancelation。把它消掉：</p>
+
+                    <pre id='vimCodeElement'>
+                        %cancel pole and zero
+                        sys = minreal(sys)
+
+                        %and print the result
+                        pzmap(sys)
+                    </pre>
+
+                    <p>圖長這樣：</p>
+                    <img class = "img-responsive" src="Homework3_res/CP2_9-2.png" alt="">
+                    <p>他會說Transfer Function長這樣：</p>
+                    <pre id = 'vimCodeElement'>
+                        sys =
+
+                            s + 1
+                            -----
+                            s + 3
+                    </pre>
+                    <p>注意pole-zero cancelation是一件很重要的事，因為他有可能會讓人誤判系統穩定性。比如說：</p>
+                    <p>$$H(s) = \frac {s - 1}{(s - 1)(s + 2)}$$</p>
+                    <p>如果把它做 poke-zero cancelation，會得到：</p>
+                    <p>$$H(s) = \frac {1} {s + 2}$$</p>
+                    <p>所有pole都在左半邊，看起來很穩定。但是這會有一個bug：Transfer Function都是在zero initial condition狀況下考量的。如果今天initial condition不是0，回到原來的DE看：
+                        $$y'' + y' - 2 = u' - u $$
+                        $$s^2Y + sY - 2Y - y(0)(s + 1) - y'(0) = sU - U - u(0)$$
+                        做一些移項。注意右半邊有關initial conidition的項：
+                        $$Y = \frac {s - 1}{s^{2} + s - 2}U + \frac {s + 1}{s^{2} + s - 2}y(0) + \frac {y'(0) + u(0)}{s^{2} + s - 2}$$
+                        可以發現最右邊的 \(\frac {y'(0) + u(0)}{s^{2} + s - 2} = \frac {y'(0) + u(0)}{(s + 2)(s - 1)}\)，只要initial condition不是0，就會爆掉。這是pole-zero cancelation時會發生的悲劇。
+                        探究其原因，可以發現是在不合時宜的地方砍掉了右半邊成對的pole-zero產生的悲劇。
+                    </p>
 
 
 
